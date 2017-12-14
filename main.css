@@ -1,0 +1,17 @@
+html {
+    background: linear-gradient(135deg, #2ad68b 0%,#8de4ff 100%);
+    height: 615px;
+}
+#runscript {
+    background: linear-gradient(135deg, red 0%, orange 100%);
+    border-color: transparent;
+}
+#frame {
+    border-color: transparent;
+    width: 1265px;
+    height: 361px;
+}
+
+#browserfullscreen {
+    border-color: transparent;
+}
