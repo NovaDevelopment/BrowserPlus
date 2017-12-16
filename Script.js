@@ -1,4 +1,3 @@
-var frame= document.getElementById("frame");
-function fullscr(){
-    frame.requestFullscreen();
+function fullscreen() {
+    alert("test.");
 }
