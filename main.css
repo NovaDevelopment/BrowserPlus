@@ -1,6 +1,5 @@
 html {
     background: linear-gradient(135deg, #2ad68b 0%,#8de4ff 100%);
-    height: 615px;
 }
 #runscript {
     background: linear-gradient(135deg, red 0%, orange 100%);
@@ -8,9 +7,13 @@ html {
 }
 #frame {
     border-color: transparent;
-    width: 1265px;
-    height: 361px;
+    width: 1250px;
+    height: 295px;
+    align-content: center;
 }
-
+#navurl {
+    width: 1000px;
+}
 #browserfullscreen {
+    margin-right: 10px;
 }
