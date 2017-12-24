@@ -3,13 +3,23 @@
     <head>
         <link rel="stylesheet" href="main.css" type="text/css">
         <script language="JavaScript" src="Script.js"></script>
+        <script language="" id="runscriptcode"></script>
+        <title id="browsertabtitle">Browser+</title>
     </head>
     <body>
         <h1>Browser+</h1>
         <h2 id="toolsheader" class="non-browser">Tools</h2>
-        <input class="non-browser" id="runscript" type="button" onclick="runscript()" value="Run Script">
-        <h2 class="non-browser" id="browserheader">Browser</h2><input type="button" id="browserfullscreen" value="Fullscreen" onclick="fullscreen()"><input type="url" placeholder="Enter URL to navigate" id="navurl"><input type="button" value="Navigate" id="navbutton" onclick="nav()">
-        <p id="currentURL" >Current URL: https://www.bing.com/</p>
-        <iframe id="frame" src="https://www.bing.com/"></iframe>
+        <input class="non-browser" id="runscript" type="button" onclick="runscript()" value="Run Script"><input hidden class="non-browser" id="r-browser" type="button" onclick="rbrowser()" value="Return to Browser">
+        <div id="browserdiv">
+            <h2 class="non-browser" id="browserheader">Browser</h2><input type="button" id="browserfullscreen" value="Fullscreen" onclick="fullscreen()"><input type="url" placeholder="Enter URL to navigate" id="navurl"><input type="button" value="Navigate" id="navbutton" onclick="nav()">
+            <p id="currentURL" >Current URL: https://www.bing.com/</p>
+            <img src="Loading.gif" hidden id="loading">
+            <iframe onload="loaded()"id="frame" src="https://www.bing.com/"></iframe>
+        </div>
+        <div hidden id="runscriptdiv">
+            <input type="text" placeholder="Script Language" id="script-language">
+            <textarea placeholder="Code" id="script-code" name="paragraph_text" cols="50" rows="10"></textarea>
+            <input type="button" onclick="run()" value="Run">
+        </div>
     </body>
 </html>
