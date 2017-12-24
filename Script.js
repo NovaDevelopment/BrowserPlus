@@ -18,7 +18,28 @@ function fullscreen() {
         }
 }
 function nav() {
-    document.getElementById("frame").src = document.getElementById("navurl").value
-    document.getElementById("currentURL").innerHTML = "Current URL: " + document.getElementById("navurl").value
-    document.getElementById("navurl").value = ""
+    if(document.getElementById("navurl").value == ""){
+        alert("Please enter a URL to navigate.")
+        document.getElementById("navurl").style = "background-color: red!important; color: white!important"
+    }
+        else{
+            document.getElementById("browsertabtitle").innerHTML = "Loading...";
+            document.getElementById("frame").hidden = "true";
+            document.getElementById("loading").removeAttribute("hidden");
+            document.getElementById("navurl").removeAttribute("style");
+            document.getElementById("frame").src = document.getElementById("navurl").value
+            document.getElementById("currentURL").innerHTML = "Current URL: " + document.getElementById("navurl").value
+            document.getElementById("navurl").value = ""
+        }
+}
+function loaded() {
+    document.getElementById("browsertabtitle").innerHTML = "Browser+";
+    document.getElementById("frame").removeAttribute("hidden");
+    document.getElementById("loading").hidden = "true";
+}
+function runscript() {
+    document.getElementById("browserdiv").hidden = "true";
+    document.getElementById("r-browser").removeAttribute("hidden");
+    document.getElementById("runscriptdiv").removeAttribute("hidden");
+    document.getElementById("runscript").hidden = "true";
 }

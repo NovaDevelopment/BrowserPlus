@@ -16,4 +16,19 @@ html {
 }
 #browserfullscreen {
     margin-right: 10px;
+    background: linear-gradient(135deg, blue 0%, purple 100%);
+    color: white;
+    border-width: 0px;
+}
+#loading {
+    width: 250px;
+    height: 250px;
+}
+#script-language {
+    width: 1225px;
+    margin-bottom: 20px;
+}
+#script-code {
+    width: 1225px;
+    height: 700px;
 }
