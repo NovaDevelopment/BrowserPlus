@@ -14,12 +14,7 @@
             <h2 class="non-browser" id="browserheader">Browser</h2><input type="button" id="browserfullscreen" value="Fullscreen" onclick="fullscreen()"><input type="url" placeholder="Enter URL to navigate" id="navurl"><input type="button" value="Navigate" id="navbutton" onclick="nav()">
             <p id="currentURL" >Current URL: https://www.bing.com/</p>
             <img src="Loading.gif" hidden id="loading">
-            <iframe onload="loaded()"id="frame" src="https://www.bing.com/"></iframe>
-        </div>
-        <div hidden id="runscriptdiv">
-            <input type="text" placeholder="Script Language" id="script-language">
-            <textarea placeholder="Code" id="script-code" name="paragraph_text" cols="50" rows="10"></textarea>
-            <input type="button" onclick="run()" value="Run">
+            <iframe onload="loaded()" id="frame" src="https://www.bing.com/"></iframe>
         </div>
     </body>
 </html>
