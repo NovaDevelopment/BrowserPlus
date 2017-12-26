@@ -37,9 +37,3 @@ function loaded() {
     document.getElementById("frame").removeAttribute("hidden");
     document.getElementById("loading").hidden = "true";
 }
-function runscript() {
-    document.getElementById("browserdiv").hidden = "true";
-    document.getElementById("r-browser").removeAttribute("hidden");
-    document.getElementById("runscriptdiv").removeAttribute("hidden");
-    document.getElementById("runscript").hidden = "true";
-}
