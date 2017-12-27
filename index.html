@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="html">
     <head>
         <link rel="stylesheet" href="main.css" type="text/css">
         <script language="JavaScript" src="Script.js"></script>
@@ -7,15 +7,18 @@
         <title id="browsertabtitle">Browser+</title>
     </head>
     <body>
-        <h1>Browser+</h1>
-        <h2 id="toolsheader" class="non-browser">Tools</h2>
-        <input class="non-browser" id="runscript" type="button" onclick="runscript()" value="Run Script"><input hidden class="non-browser" id="r-browser" type="button" onclick="rbrowser()" value="Return to Browser">
-        <div id="browserdiv">
-            <h2 class="non-browser" id="browserheader">Browser</h2><input type="button" id="browserfullscreen" value="Fullscreen" onclick="fullscreen()"><input type="url" placeholder="Enter URL to navigate" id="navurl"><input type="button" value="Navigate" id="navbutton" onclick="nav()">
-            <p id="currentURL" >Current URL: https://www.bing.com/</p>
-            <img src="Loading.gif" hidden id="loading">
-            <iframe onload="loaded()" id="frame" src="https://www.bing.com/"></iframe>
+        <div id="non-browser">
+            <h1>Browser+</h1>
+            <h2 id="toolsheader" class="non-browser">Tools</h2>
+            <h3>Privacy</h3>
+            <input type="button" value="Privacy Blur" id="blur" accesskey="b" onclick="blurcontent()">
+            <input type="button" value="Close Window" id="windowClose" onclick="windowclose()">
+            <h2 class="non-browser" id="browserheader">Browser</h2>
         </div>
+        <input type="button" id="browserfullscreen" value="Fullscreen" onclick="fullscreen()"><input type="url" placeholder="Enter URL to navigate" id="navurl"><input type="button" value="Navigate" id="navbutton" onclick="nav()">
+        <p id="currentURL" >Current URL: https://www.bing.com/</p>
+        <img src="Loading.gif" hidden id="loading">
+        <iframe onload="loaded()" id="frame" src="https://www.bing.com/"></iframe>
         <p id="disclaimer">This site is under ongoing development. Some features may not work or function correctly.</p>
     </body>
 </html>
