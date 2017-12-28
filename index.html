@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html id="html">
     <head>
-            <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111689131-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-111689131-1');
-</script>
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111689131-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());        
+            gtag('config', 'UA-111689131-1');
+        </script>
         <link rel="stylesheet" href="main.css" type="text/css">
         <script language="JavaScript" src="Script.js"></script>
         <script language="" id="runscriptcode"></script>
@@ -22,9 +21,12 @@
             <h3>Privacy</h3>
             <input type="button" value="Privacy Blur" id="blur" accesskey="b" onclick="blurcontent()">
             <input type="button" value="Close Window" id="windowClose" onclick="windowclose()">
+            <input type="button" value="Temporary Site Disable" id="tempDisable" onclick="disableSite()">
             <h2 class="non-browser" id="browserheader">Browser</h2>
         </div>
-        <input type="button" id="browserfullscreen" value="Fullscreen" onclick="fullscreen()"><input type="url" placeholder="Enter URL to navigate" id="navurl"><input type="button" value="Navigate" id="navbutton" onclick="nav()">
+        <input type="button" id="browserfullscreen" value="Fullscreen" onclick="fullscreen()">
+        <input type="url" placeholder="Enter URL to navigate" id="navurl">
+        <input type="button" value="Navigate" id="navbutton" onclick="nav()">
         <p id="currentURL" >Current URL: https://www.bing.com/</p>
         <img src="Loading.gif" hidden id="loading">
         <iframe onload="loaded()" id="frame" src="https://www.bing.com/"></iframe>

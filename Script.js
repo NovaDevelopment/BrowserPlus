@@ -53,3 +53,13 @@ function windowclose() {
     close();
     window.location.replace("about:blank");
 }
+function disableSite() {
+    document.getElementById("frame").src="about:blank";
+    document.getElementById("currentURL").innerHTML="URL is not being displayed currently.";
+    document.getElementById("currentURL").style="filter: blur(5px)!important;";
+    document.getElementById("navurl").disabled="true";
+    document.getElementById("navbutton").disabled="true";
+    document.getElementById("non-browser").innerHTML="";
+    document.getElementById("frame").style="height: 465px!important;";
+    document.getElementById("browserfullscreen").disabled="true";
+}

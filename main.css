@@ -39,3 +39,9 @@ html {
 #blur {
     margin-right: 5px;
 }
+#windowClose {
+    background-color: red;
+}
+#tempDisable {
+    background-color: red;
+}
