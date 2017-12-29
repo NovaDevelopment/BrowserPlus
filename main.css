@@ -1,5 +1,6 @@
 html {
     background: linear-gradient(135deg, #2ad68b 0%,#8de4ff 100%);
+    font-family: 'Oxygen', sans-serif;
 }
 #runscript {
     background: linear-gradient(135deg, red 0%, orange 100%);
