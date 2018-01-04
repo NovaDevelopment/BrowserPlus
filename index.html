@@ -28,7 +28,7 @@
         <input type="button" id="browserfullscreen" value="Fullscreen" onclick="fullscreen()">
         <input type="url" placeholder="Enter URL to navigate" id="navurl">
         <input type="button" value="Navigate" id="navbutton" onclick="nav()">
-        <p id="currentURL" >Current URL: https://www.bing.com/</p>
+        <marquee behavior="alternate" scrollamount="2" scrolldelay="20" truespeed><p id="currentURL" >Current URL: https://www.bing.com/</p></marquee>
         <img src="Loading.gif" hidden id="loading">
         <iframe onload="loaded()" id="frame" src="https://www.bing.com/"></iframe>
         <p id="disclaimer">This site is under ongoing development. Some features may not work or function correctly.</p>
