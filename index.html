@@ -22,13 +22,13 @@
             <h3>Privacy</h3>
             <input type="button" value="Privacy Blur" id="blur" accesskey="b" onclick="blurcontent()">
             <input type="button" value="Close Window" id="windowClose" onclick="windowclose()">
-            <input type="button" value="Temporary Site Disable" id="tempDisable" onclick="disableSite()">
+            <input type="button" value="Quick Data Remove" id="quickRemove" onclick="clearData()">
             <h2 class="non-browser" id="browserheader">Browser</h2>
         </div>
         <input type="button" id="browserfullscreen" value="Fullscreen" onclick="fullscreen()">
         <input type="url" placeholder="Enter URL to navigate" id="navurl">
         <input type="button" value="Navigate" id="navbutton" onclick="nav()">
-        <marquee behavior="alternate" scrollamount="2" scrolldelay="20" truespeed><p id="currentURL" >Current URL: https://www.bing.com/</p></marquee>
+        <p id="currentURL" >Current URL: https://www.bing.com/</p>
         <img src="Loading.gif" hidden id="loading">
         <iframe onload="loaded()" id="frame" src="https://www.bing.com/"></iframe>
         <p id="disclaimer">This site is under ongoing development. Some features may not work or function correctly.</p>
