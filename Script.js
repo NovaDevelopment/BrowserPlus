@@ -33,7 +33,7 @@ function nav() {
             document.getElementById("navurl").value = ""
         }
 }
-function loaded() {
+function loadedframe() {
     document.getElementById("browsertabtitle").innerHTML = "Browser+";
     document.getElementById("frame").removeAttribute("hidden");
     document.getElementById("loading").hidden = "true";
@@ -57,7 +57,7 @@ function windowclose() {
     close();
     window.location.replace("about:blank");
 }
-function ciearData() {
+function clearData() {
     document.getElementById("currentURL").innerHTML = "Current URL: Waiting for navigation...";
     document.getElementById("frame").src = "about:blank";
     document.getElementById("frame").innerHTML = "<p style="font-size: 74px!important; text-align: center!important;">Browser+</p>"
