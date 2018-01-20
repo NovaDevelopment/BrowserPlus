@@ -59,6 +59,5 @@ function windowclose() {
 }
 function clearData() {
     document.getElementById("currentURL").innerHTML = "Current URL: Waiting for navigation...";
-    document.getElementById("frame").src = "about:blank";
-    document.getElementById("frame").innerHTML = "<p style="font-size: 74px!important; text-align: center!important;">Browser+</p>"
+    document.getElementById("frame").src = "splashpage.html";
 }
