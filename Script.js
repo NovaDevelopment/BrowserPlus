@@ -1,6 +1,12 @@
 if (document.cookie.replace(/(?:(?:^|.*;\s*)disclaimerDisplayed\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
-    alert("By using this site, you agree that you have read and understand the Disclaimers and Terms section of the document, README.md, in the GitHub repository that contains the contents of this site. If you have not done so, you must complete this action before using the site. Navigate to https://zelnickb.github.io/BrowserPlus/README.md in order to read the document. IT IS YOUR RESPONSIBILITY TO CONVERT THE MARKDOWN TO A MORE READABLE FORM IF YOU CANNOT COMPREHEND THE CODE.");
-    document.cookie = "disclaimerDisplayed=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+    if(window.confirm("By using this site, you agree that you have read and understand the Disclaimers and Terms section of the document, README.md, in the GitHub repository that contains the contents of this site. If you have not done so, you must complete this action before using the site. You will be redirected to GitHub in order to read the document. After reading, you may return to BrowserPlus and use it.")){
+        document.cookie = "disclaimerDisplayed=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+        window.location.replace("https://github.com/ZelnickB/BrowserPlus#browserplus");
+    }
+        else {
+            close();
+            window.location.replace("about:blank");
+        }
 }
 var isfullscreen = false;
 var isblurred = false;
