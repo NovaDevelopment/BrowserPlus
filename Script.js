@@ -71,7 +71,7 @@ function versionInfoView() {
     window.open(
         "Version Info.html",
         "popUpWindow",
-        "toolbar=no, width=300px, height=465px"
+        "toolbar=no, width=300px, height: 660px"
     )
 }
 function aboutInBrowser() {
