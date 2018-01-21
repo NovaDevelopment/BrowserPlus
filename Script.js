@@ -61,3 +61,10 @@ function clearData() {
     document.getElementById("currentURL").innerHTML = "Current URL: Waiting for navigation...";
     document.getElementById("frame").src = "splashpage.html";
 }
+function versionInfoView() {
+    window.open(
+        "Version Info.html",
+        "popUpWindow",
+        "menubar=no, toolbar=no, width=300px, height=400px"
+    )
+}

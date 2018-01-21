@@ -23,6 +23,8 @@
             <input type="button" value="Privacy Blur" id="blur" accesskey="b" onclick="blurcontent()">
             <input type="button" value="Close Window" id="windowClose" onclick="windowclose()">
             <input type="button" value="Quick Data Remove" id="quickRemove" onclick="clearData()">
+            <h3>About</h3>
+            <input type="button" value="View Version Information" id="versionInfoViewer" onclick="versionInfoView()">
             <h2 class="non-browser" id="browserheader">Browser</h2>
         </div>
         <input type="button" id="browserfullscreen" value="Fullscreen" onclick="fullscreen()">
@@ -31,6 +33,5 @@
         <p id="currentURL" >Current URL: https://www.bing.com/</p>
         <img src="Loading.gif" hidden id="loading">
         <iframe onload="loadedframe()" id="frame" src="https://www.bing.com/"></iframe>
-        <p id="disclaimer">This site is under ongoing development. Some features may not work or function correctly.</p>
     </body>
 </html>
