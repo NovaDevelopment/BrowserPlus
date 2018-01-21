@@ -8,7 +8,7 @@ function fullscreen() {
     if(isfullscreen == false) {
         document.getElementById("non-browser").hidden = "true";
         document.getElementById("browserfullscreen").value = "Exit Fullscreen";
-        document.getElementById("frame").style = "height: 465px!important;";
+        document.getElementById("frame").style = "height: 504px!important;";
         isfullscreen = true;
     }
         else {
@@ -65,6 +65,11 @@ function versionInfoView() {
     window.open(
         "Version Info.html",
         "popUpWindow",
-        "menubar=no, toolbar=no, width=300px, height=400px"
+        "toolbar=no, width=300px, height=465px"
     )
+}
+function aboutInBrowser() {
+    if(window.confirm("This page will not be opened in BrowserPlus, thus voiding all privacy features. Are you sure that you want to proceed?")) {
+        window.open("https://github.com/ZelnickB/BrowserPlus");
+    }
 }

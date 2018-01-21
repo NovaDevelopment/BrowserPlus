@@ -33,9 +33,9 @@ html {
     width: 1225px;
     height: 700px;
 }
-#blur {
-    margin-right: 5px;
-}
 #windowClose {
     background-color: red;
+}
+.toolbutton {
+    margin-right: 5px;
 }
