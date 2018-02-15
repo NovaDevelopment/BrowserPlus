@@ -8,6 +8,8 @@ if (document.cookie.replace(/(?:(?:^|.*;\s*)disclaimerDisplayed\s*\=\s*([^;]*).*
             window.location.replace("about:blank");
         }
 }
+var navurl = document.getElementById("navurl");
+var navbutton = document.getElementById("navigationbutton");
 var isfullscreen = false;
 var isblurred = false;
 function fullscreen() {
@@ -24,18 +26,20 @@ function fullscreen() {
             isfullscreen = false;
         }
 }
-function nav() {
-    if(document.getElementById("navurl").value == "") {
-        alert("Please enter a URL to navigate.")
-        document.getElementById("navurl").style = "background-color: red!important; color: white!important"
+function nav(navigationURL) {
+    if(navigationURL == "") {
+        alert("Please enter a URL to navigate.");
+        return "Please enter a URL to navigate";
+        document.getElementById("navurl").style = "background-color: red!important; color: white!important";
     }
         else {
+            return "Command executed."
             document.getElementById("browsertabtitle").innerHTML = "Loading...";
             document.getElementById("frame").hidden = "true";
             document.getElementById("loading").removeAttribute("hidden");
             document.getElementById("navurl").removeAttribute("style");
-            document.getElementById("frame").src = document.getElementById("navurl").value
-            document.getElementById("currentURL").innerHTML = "Current URL: " + document.getElementById("navurl").value
+            document.getElementById("frame").src = navigationURL;
+            document.getElementById("currentURL").innerHTML = "Current URL: " + navigationURL;
             document.getElementById("navurl").value = ""
         }
 }
@@ -79,3 +83,4 @@ function aboutInBrowser() {
         window.open("https://github.com/ZelnickB/BrowserPlus");
     }
 }
+navbutton.onclick = "nav(navurl.value)";
