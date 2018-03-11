@@ -23,6 +23,9 @@
             <input class="toolbutton" type="button" value="Privacy Blur" id="blur" accesskey="b" onclick="blurcontent()">
             <input class="toolbutton" type="button" value="Close Window" id="windowClose" onclick="windowclose()">
             <input class="toolbutton" type="button" value="Quick Data Remove" id="quickRemove" onclick="clearData()">
+            <h3>Appearance</h3>
+            <input class="toolbutton" type="button" value="Toggle Dark Mode" id="toggleDarkMode" onclick="toggleDarkMode()">
+            <input class="toolbutton" type="button" value="Toggle Simple Mode" id="toggleSimpleMode" onclick="toggleSimpleMode()">
             <h3>About</h3>
             <input class="toolbutton" type="button" value="View Version Information" id="versionInfoViewer" onclick="versionInfoView()">
             <input class="toolbutton" type="button" value="Open GitHub Page" onclick="aboutInBrowser()">
@@ -30,7 +33,7 @@
         </div>
         <input type="button" id="browserfullscreen" value="Fullscreen" onclick="fullscreen()">
         <input type="url" placeholder="Enter URL to navigate" id="navurl">
-        <input type="button" value="Navigate" id="navigationbutton">
+        <input type="button" value="Navigate" id="navigationbutton" onclick="nav(document.getElementById('navurl').value)">
         <p id="currentURL" >Current URL: https://www.bing.com/</p>
         <img src="Loading.gif" hidden id="loading">
         <iframe onload="loadedframe()" id="frame" src="https://www.bing.com/"></iframe>

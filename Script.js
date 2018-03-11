@@ -8,10 +8,10 @@ if (document.cookie.replace(/(?:(?:^|.*;\s*)disclaimerDisplayed\s*\=\s*([^;]*).*
             window.location.replace("about:blank");
         }
 }
-var navurl = document.getElementById("navurl");
-var navbutton = document.getElementById("navigationbutton");
 var isfullscreen = false;
 var isblurred = false;
+var isDarkMode = false;
+var isSimpleMode = false;
 function fullscreen() {
     if(isfullscreen == false) {
         document.getElementById("non-browser").hidden = "true";
@@ -29,19 +29,18 @@ function fullscreen() {
 function nav(navigationURL) {
     if(navigationURL == "") {
         alert("Please enter a URL to navigate.");
-        return "Please enter a URL to navigate";
         document.getElementById("navurl").style = "background-color: red!important; color: white!important";
     }
         else {
-            return "Command executed."
             document.getElementById("browsertabtitle").innerHTML = "Loading...";
             document.getElementById("frame").hidden = "true";
             document.getElementById("loading").removeAttribute("hidden");
             document.getElementById("navurl").removeAttribute("style");
             document.getElementById("frame").src = navigationURL;
             document.getElementById("currentURL").innerHTML = "Current URL: " + navigationURL;
-            document.getElementById("navurl").value = ""
+            document.getElementById("navurl").value = "";
         }
+        return "Command executed.";
 }
 function loadedframe() {
     document.getElementById("browsertabtitle").innerHTML = "Browser+";
@@ -65,11 +64,35 @@ function blurcontent() {
 function windowclose() {
     document.getElementById("html").style="filter: blur(50px)!important;"
     close();
+    clear();
     window.location.replace("about:blank");
 }
 function clearData() {
     document.getElementById("currentURL").innerHTML = "Current URL: Waiting for navigation...";
     document.getElementById("frame").src = "splashpage.html";
+    clear();
+}
+function toggleDarkMode() {
+    if(isDarkMode == false){
+        document.getElementById("html").style="color: white!important; background: black!important;";
+        isDarkMode = true;
+        isSimpleMode = false;
+    }
+        else{
+            document.getElementById("html").removeAttribute("style");
+            isDarkMode = false;
+        }
+}
+function toggleSimpleMode() {
+    if(isSimpleMode == false){
+        document.getElementById("html").style="background: white!important; font-family:none!important";
+        isSimpleMode = true;
+        isDarkMode = false;
+    }
+        else{
+            document.getElementById("html").removeAttribute("style");
+            isSimpleMode = false;
+        }
 }
 function versionInfoView() {
     window.open(
@@ -83,4 +106,3 @@ function aboutInBrowser() {
         window.open("https://github.com/ZelnickB/BrowserPlus");
     }
 }
-navbutton.onclick = "nav(navurl.value)";
