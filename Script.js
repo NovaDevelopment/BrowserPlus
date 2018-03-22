@@ -15,6 +15,7 @@ var isfullscreen = false;
 var isblurred = false;
 var isDarkMode = false;
 var isSimpleMode = false;
+var isCoffeeMode = false;
 function fullscreen() {
     if(isfullscreen == false) {
         document.getElementById("non-browser").hidden = "true";
@@ -80,6 +81,7 @@ function toggleDarkMode() {
         document.getElementById("html").style="color: white!important; background: black!important;";
         isDarkMode = true;
         isSimpleMode = false;
+        isCoffeeMode = false;
     }
         else{
             document.getElementById("html").removeAttribute("style");
@@ -91,11 +93,40 @@ function toggleSimpleMode() {
         document.getElementById("html").style="background: white!important; font-family:none!important";
         isSimpleMode = true;
         isDarkMode = false;
+        isCoffeeMode = false;
     }
         else{
             document.getElementById("html").removeAttribute("style");
             isSimpleMode = false;
         }
+}
+function toggleCoffeeMode() {
+    if (document.cookie.replace(/(?:(?:^|.*;\s*)CoffeeInfo\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
+            alert("Studies have shown that blue light stimulates the human circadian rhythm. You may notice that at a certain time, some electronic devices' screens aquire an orange tint. Because orange is the opposite of blue, it blocks some of the display's blue light, aiding sleep. BrowserPlus's coffee mode does the opposite, using blue light to awaken you by stimulating your circadian rhythm.");
+            document.cookie = "CoffeeInfo=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+                if(isCoffeeMode == false){
+                    document.getElementById("html").style="background: linear-gradient(135deg, aqua 0%, blue 50%, darkblue 100%);";
+                    isCoffeeMode = true;
+                    isSimpleMode = false;
+                    isDarkMode = false;
+                }
+                    else{
+                        document.getElementById("html").removeAttribute("style");
+                        isCoffeeMode = false;
+                    }
+        }
+            else {
+                if(isCoffeeMode == false){
+                    document.getElementById("html").style="background: linear-gradient(135deg, aqua 0%, blue 50%, darkblue 100%);";
+                    isCoffeeMode = true;
+                    isSimpleMode = false;
+                    isDarkMode = false;
+                }
+                    else{
+                        document.getElementById("html").removeAttribute("style");
+                        isCoffeeMode = false;
+                    }
+            }
 }
 function versionInfoView() {
     window.open(

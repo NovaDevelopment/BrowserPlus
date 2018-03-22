@@ -1,6 +1,8 @@
 html {
-    background: linear-gradient(135deg, #2ad68b 0%,#8de4ff 100%);
+    background: linear-gradient(135deg, red 0%, orange 100%);
     font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    height: 100%;
 }
 #runscript {
     background: linear-gradient(135deg, red 0%, orange 100%);
@@ -8,34 +10,35 @@ html {
 }
 #frame {
     border-color: transparent;
-    width: 1250px;
+    width: 100%;
     height: 299px;
     align-content: center;
 }
 #navurl {
-    width: 1000px;
+    width: 87%;
+    margin-right: 1%;
 }
 #browserfullscreen {
-    margin-right: 10px;
+    margin-right: 0.5%;
+    padding: 3px;
     background: linear-gradient(135deg, blue 0%, purple 100%);
     color: white;
     border-width: 0px;
+    width: 5%;
 }
 #loading {
     width: 250px;
     height: 250px;
 }
-#script-language {
-    width: 1225px;
-    margin-bottom: 20px;
-}
-#script-code {
-    width: 1225px;
-    height: 700px;
-}
 #windowClose {
-    background-color: red;
+    background-color: firebrick;
+}
+#navigationbutton {
+    width: 5%;
 }
 .toolbutton {
     margin-right: 5px;
+}
+dn{
+    background-color: 
 }
