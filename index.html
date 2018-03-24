@@ -20,13 +20,13 @@
             <h1>Browser+</h1>
             <h2 id="toolsheader" class="non-browser">Tools</h2>
             <h3>Privacy</h3>
-            <input class="toolbutton" type="button" value="Privacy Blur" id="blur" accesskey="b" onclick="blurcontent()">
-            <input class="toolbutton" type="button" value="Close Window" id="windowClose" onclick="windowclose()">
-            <input class="toolbutton" type="button" value="Quick Data Remove" id="quickRemove" onclick="clearData()">
+            <input name="Blur the content of your browser so that it cannot be easily read. Click again to undo." class="toolbutton" type="button" value="Privacy Blur" id="blur" accesskey="b" onclick="blurcontent()">
+            <input name="If compatible, your browser will attempt to close the window. Otherwise, it will navigate to a blank page." class="toolbutton" type="button" value="Close Window" id="windowClose" onclick="windowclose()">
+            <input name="Replace the content of your website with the BrowserPlus logo. Clicking again will not undo the action." class="toolbutton" type="button" value="Quick Data Remove" id="quickRemove" onclick="clearData()">
             <h3>Appearance</h3>
-            <input class="toolbutton" type="button" value="Toggle Dark Mode" id="toggleDarkMode" onclick="toggleDarkMode()">
-            <input class="toolbutton" type="button" value="Toggle Simple Mode" id="toggleSimpleMode" onclick="toggleSimpleMode()">
-            <input class="toolbutton" type="button" value="Toggle Coffee Mode" id="toggleCoffeeMode" onclick="toggleCoffeeMode()">
+            <input name="Dark Mode is the perfect solution to nighttime browsing." class="toolbutton" type="button" value="Toggle Dark Mode" id="toggleDarkMode" onclick="toggleDarkMode()">
+            <input name="Enable Simple Mode to remove distracting fonts and backgrounds from the interface." class="toolbutton" type="button" value="Toggle Simple Mode" id="toggleSimpleMode" onclick="toggleSimpleMode()">
+            <input name="Studies have shown that blue light stimulates the human circadian rhythm. You may notice that at a certain time, some electronic devices' screens aquire an orange tint. Because orange is the opposite of blue, it blocks some of the display's blue light, aiding sleep. BrowserPlus's coffee mode does the opposite, using blue light to awaken you by stimulating your circadian rhythm." class="toolbutton" type="button" value="Toggle Coffee Mode" id="toggleCoffeeMode" onclick="toggleCoffeeMode()">
             <h3>About</h3>
             <input class="toolbutton" type="button" value="View Version Information" id="versionInfoViewer" onclick="versionInfoView()">
             <input class="toolbutton" type="button" value="Open GitHub Page" onclick="aboutInBrowser()">
@@ -35,6 +35,7 @@
         <input type="button" id="browserfullscreen" value="Fullscreen" onclick="fullscreen()">
         <input type="url" placeholder="Enter URL to navigate" id="navurl">
         <input type="button" value="Navigate" id="navigationbutton" onclick="nav(document.getElementById('navurl').value)">
+        <input type="button" value="&#8635" id="refreshbutton" onclick="refreshiframe()">
         <p id="currentURL" >Current URL: https://www.bing.com/</p>
         <img src="Loading.gif" hidden id="loading">
         <iframe onload="loadedframe()" id="frame" src="https://www.bing.com/"></iframe>

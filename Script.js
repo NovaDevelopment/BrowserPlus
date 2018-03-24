@@ -21,11 +21,13 @@ function fullscreen() {
         document.getElementById("non-browser").hidden = "true";
         document.getElementById("browserfullscreen").value = "Exit Fullscreen";
         document.getElementById("frame").style = "height: 504px!important;";
+        document.getElementById("browserfullscreen").style = "width: 90px!important; margin-bottom: 10px;"
         isfullscreen = true;
     }
         else {
             document.getElementById("non-browser").removeAttribute("hidden");
             document.getElementById("frame").removeAttribute("style");
+            document.getElementById("browserfullscreen").removeAttribute("style");
             document.getElementById("browserfullscreen").value = "Fullscreen";
             isfullscreen = false;
         }
@@ -45,6 +47,9 @@ function nav(navigationURL) {
             document.getElementById("navurl").value = "";
         }
         return "Command executed.";
+}
+function refreshiframe() {
+    nav(document.getElementById("frame").src)
 }
 function loadedframe() {
     document.getElementById("browsertabtitle").innerHTML = "Browser+";
