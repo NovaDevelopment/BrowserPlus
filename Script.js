@@ -73,13 +73,13 @@ function blurcontent() {
 function windowclose() {
     document.getElementById("html").style="filter: blur(50px)!important;"
     close();
-    clear();
+    console.clear();
     window.location.replace("about:blank");
 }
 function clearData() {
     document.getElementById("currentURL").innerHTML = "Current URL: Waiting for navigation...";
     document.getElementById("frame").src = "splashpage.html";
-    clear();
+    console.clear();
 }
 function toggleDarkMode() {
     if(isDarkMode == false){
