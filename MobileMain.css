@@ -1,0 +1,33 @@
+html {
+    font-family: "Open Sans";
+    background: linear-gradient(135deg, blue 0%, purple 100%);
+    color: white;
+}
+#frame {
+    width: 100%;
+    height: 500px;
+    border-width: 0px;
+}
+#navurl {
+    width: 100%;
+    margin-bottom: 5px;
+}
+#refresh {
+    float: right;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    background: linear-gradient(135deg, lime 0%, green 100%);
+    padding: 3px;
+    border-width: 0px;
+}
+#currentURL {
+    float: left;
+    margin-top: 0px;
+}
+#disclaimer {
+    margin-bottom: 0px;
+}
+#experiencenote {
+    margin-top: 5px;
+}
