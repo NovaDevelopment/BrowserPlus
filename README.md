@@ -12,6 +12,6 @@ This section does *not* contain information on how to use the software, only inf
 * **Attributions to @ZelnickB are required. By using and accessing this GitHub page, you agree to attribute the author if you modify any of the documents, including script, stylesheets, etc. within this project.**
 * You must include the author, @ZelnickB's, name at the bottom of modified code pages.
 ### Summary
-**By using and accessing the website, code, or any other components of this repository, you agree to abide by all terms above, as well as any other terms presented by the creator. This document is *not a replacement for common sense relating to the usage and modification of this software.* **
+**By using and accessing the website, code, or any other components of this repository, you agree to abide by all terms above, as well as any other terms presented by the creator. This document is *not a replacement for common sense relating to the usage and modification of this software.***
 ## Feedback
 Because BrowserPlus is under continuing development, some features may not work or may result in glitches at certain times. To aid in the development of the software, please record these glitches in the **Issues** section of BrowserPlus's GitHub page.
