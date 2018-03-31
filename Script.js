@@ -43,7 +43,7 @@ function nav(navigationURL) {
             document.getElementById("loading").removeAttribute("hidden");
             document.getElementById("navurl").removeAttribute("style");
             document.getElementById("frame").src = navigationURL;
-            document.getElementById("currentURL").innerHTML = "Current URL: " + navigationURL;
+            document.getElementById("currentURL").innerHTML = "Last Navigated URL: " + navigationURL;
             document.getElementById("navurl").value = "";
         }
         return "Command executed.";
@@ -60,12 +60,16 @@ function blurcontent() {
    if(isblurred == false){
         document.getElementById("frame").style = "filter: blur(20px)!important;";
         document.getElementById("currentURL").style = "filter: blur(20px)!important;";
+        document.getElementById("refreshbutton").disabled = "true";
+        document.getElementById("refreshbutton").style = "filter: blur(10px)!important;"
         document.getElementById("blur").value = "Undo Privacy Blur";
         isblurred = true;
     }
         else{
             document.getElementById("frame").removeAttribute("style");
             document.getElementById("currentURL").removeAttribute("style");
+            document.getElementById("refreshbutton").removeAttribute("disabled");
+            document.getElementById("refreshbutton").removeAttribute("style");
             document.getElementById("blur").value = "Privacy Blur";
             isblurred = false;
         }
@@ -77,7 +81,7 @@ function windowclose() {
     window.location.replace("about:blank");
 }
 function clearData() {
-    document.getElementById("currentURL").innerHTML = "Current URL: Waiting for navigation...";
+    document.getElementById("currentURL").innerHTML = "Last Navigated URL: Waiting for navigation...";
     document.getElementById("frame").src = "splashpage.html";
     console.clear();
 }
