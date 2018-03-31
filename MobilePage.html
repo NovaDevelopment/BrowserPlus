@@ -19,7 +19,7 @@
         <h1>BrowserPlus Mobile</h1>
         <p id="disclaimer" hidden="true">Before using BrowserPlus, it is your responsibility to read the README.md document on <a href="https://github.com/ZelnickB/BrowserPlus#browserplus">GitHub</a>.</p>
         <p id="experiencenote" hidden="true">For a more through experience, access BrowserPlus, on a desktop, laptop, Mac, etc.</p>
-        <input type="button" value="Hide Tools" id="hideTools" onclick="hideTools()">
+        <input class="miscellaneousbutton" type="button" value="Hide Tools" id="hideTools" onclick="hideTools()">
         <div id="tools">
             <h3>Privacy</h3>
             <input title="Blur the content of your browser so that it cannot be easily read. Click again to undo." class="toolbutton" type="button" value="Privacy Blur" id="blur" accesskey="b" onclick="blurcontent()">
@@ -30,9 +30,9 @@
         </div>
         <br>
         <input id="navurl" type="text" placeholder="Enter full URL, including 'http://' or 'https://'">
-        <input id="navbutton" type="button" value="Navigate" onclick="nav(document.getElementById('navurl').value)">
+        <input class="miscellaneousbutton" id="navbutton" type="button" value="Navigate" onclick="nav(document.getElementById('navurl').value)">
         <br>
-        <p id="currentURL">Current URL: https://www.bing.com/</p>
+        <p id="currentURL">Last Navigated URL: https://www.bing.com/</p>
         <input id="refresh" type="button" value="&#8635" onclick="refreshiframe()">
         <iframe src="https://www.bing.com/" id="frame"></iframe>
     </body>
