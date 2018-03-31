@@ -1,12 +1,40 @@
 <!DOCTYPE html>
-<html style="background: linear-gradient(135deg, black 0%, dimgrey 100%); color: white; height: 100%;">
+<html id="html">
     <head>
-        <title>BrowserPlus</title>
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111689131-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-111689131-1');
+        </script>
+        <title id="browsertabtitle">BrowserPlus Mobile</title>
+        <link rel="shortcut icon" href="SmartPhone%20Icon.ico">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-        <link rel="shortcut icon" href="Error%20Icon.png">
+        <link rel="stylesheet" href="MobileMain.css" type="text/css">
     </head>
     <body>
-        <p style="font-size: 100px; font-weight: bold; font-family: 'Open Sans'; margin-bottom: 0px; margin-top: 5px; text-align: center;">Unsupported User Agent.</p>
-        <p style="font-size: 30px; font-family: 'Open Sans'; margin-top: 2px;">In other words, your device doesn't support BrowserPlus. Most likely, this is because you are using a mobile device. Please switch to a laptop, PC, Mac, etc. to use BrowserPlus. We are currently working on a mobile experience for BrowserPlus</p>
+        <h1>BrowserPlus Mobile</h1>
+        <p id="disclaimer" hidden="true">Before using BrowserPlus, it is your responsibility to read the README.md document on <a href="https://github.com/ZelnickB/BrowserPlus#browserplus">GitHub</a>.</p>
+        <p id="experiencenote" hidden="true">For a more through experience, access BrowserPlus, on a desktop, laptop, Mac, etc.</p>
+        <input class="miscellaneousbutton" type="button" value="Hide Tools" id="hideTools" onclick="hideTools()">
+        <div id="tools">
+            <h3>Privacy</h3>
+            <input title="Blur the content of your browser so that it cannot be easily read. Click again to undo." class="toolbutton" type="button" value="Privacy Blur" id="blur" accesskey="b" onclick="blurcontent()">
+            <input title="Replace the content of your website with the BrowserPlus logo. Clicking again will not undo the action." class="toolbutton" type="button" value="Quick Data Remove" id="quickRemove" onclick="clearData()">
+            <h3>Other</h3>
+            <input title="Dark Mode is the perfect solution to nighttime browsing." class="toolbutton" type="button" value="Toggle Dark Mode" id="toggleDarkMode" onclick="toggleDarkMode()">
+            <input class="toolbutton" type="button" value="Open GitHub Page" onclick="aboutInBrowser()">
+        </div>
+        <br>
+        <input id="navurl" type="text" placeholder="Enter full URL, including 'http://' or 'https://'">
+        <input class="miscellaneousbutton" id="navbutton" type="button" value="Navigate" onclick="nav(document.getElementById('navurl').value)">
+        <br>
+        <p id="currentURL">Last Navigated URL: https://www.bing.com/</p>
+        <input id="refresh" type="button" value="&#8635" onclick="refreshiframe()">
+        <iframe src="https://www.bing.com/" id="frame"></iframe>
     </body>
+    <script src="MobileScript.js"></script>
 </html>
