@@ -2,14 +2,23 @@ html {
     font-family: "Open Sans";
     background: linear-gradient(135deg, blue 0%, purple 100%);
     color: white;
+    font-size: 30px;
+}
+a {
+    color: white;
+}
+h1 {
+    font-size: 60px;
 }
 .toolbutton {
     border-width: 0px;
     padding: 3px;
+    font-size: 25px;
 }
 .miscellaneousbutton {
     border-width: 0px;
     padding: 3px;
+    font-size: 25px;
 }
 #frame {
     width: 100%;

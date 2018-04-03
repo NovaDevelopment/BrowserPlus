@@ -4,6 +4,9 @@ html {
     width: 100%;
     height: 100%;
 }
+input[type=button]{
+    cursor: pointer;
+}
 #runscript {
     background: linear-gradient(135deg, red 0%, orange 100%);
     border-color: transparent;
