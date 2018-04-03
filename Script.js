@@ -39,6 +39,7 @@ function nav(navigationURL) {
     }
         else {
             document.getElementById("browsertabtitle").innerHTML = "Loading...";
+            document.getElementById("html").style = "cursor: wait!important;"
             document.getElementById("frame").hidden = "true";
             document.getElementById("loading").removeAttribute("hidden");
             document.getElementById("navurl").removeAttribute("style");
@@ -46,7 +47,7 @@ function nav(navigationURL) {
             document.getElementById("currentURL").innerHTML = "Last Navigated URL: " + navigationURL;
             document.getElementById("navurl").value = "";
         }
-        return "Command executed.";
+        return 'Command executed.';
 }
 function refreshiframe() {
     nav(document.getElementById("frame").src)
@@ -54,6 +55,7 @@ function refreshiframe() {
 function loadedframe() {
     document.getElementById("browsertabtitle").innerHTML = "Browser+";
     document.getElementById("frame").removeAttribute("hidden");
+    document.getElementById("html").removeAttribute("style");
     document.getElementById("loading").hidden = "true";
 }
 function blurcontent() {
