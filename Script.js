@@ -151,3 +151,8 @@ function aboutInBrowser() {
         window.open("https://github.com/ZelnickB/BrowserPlus");
     }
 }
+function reportIssues() {
+    if(window.confirm("This page will not be opened in BrowserPlus, thus voiding all privacy features. Are you sure that you want to proceed?")) {
+        window.open("https://github.com/ZelnickB/BrowserPlus/issues");
+    }
+}
