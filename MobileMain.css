@@ -3,6 +3,7 @@ html {
     background: linear-gradient(135deg, blue 0%, purple 100%);
     color: white;
     font-size: 30px;
+    min-height: 100%;
 }
 a {
     color: white;
