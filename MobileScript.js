@@ -42,7 +42,7 @@ function blurcontent() {
 }
 function clearData() {
     document.getElementById("currentURL").innerHTML = "Last Navigated URL: Waiting for navigation...";
-    document.getElementById("frame").src = "splashpage.html";
+    document.getElementById("frame").src = "mobilesplashpage.html";
     console.clear();
 }
 function toggleDarkMode() {

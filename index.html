@@ -17,7 +17,7 @@
     </head>
     <body>
         <div id="non-browser">
-            <h1>Browser+</h1>
+            <h1 id="main-title">Browser+</h1>
             <h2 id="toolsheader" class="non-browser">Tools</h2>
             <h3>Privacy</h3>
             <input title="Blur the content of your browser so that it cannot be easily read. Click again to undo." class="toolbutton" type="button" value="Privacy Blur" id="blur" accesskey="b" onclick="blurcontent()">
@@ -28,16 +28,16 @@
             <input title="Enable Simple Mode to remove distracting fonts and backgrounds from the interface." class="toolbutton" type="button" value="Toggle Simple Mode" id="toggleSimpleMode" onclick="toggleSimpleMode()">
             <input title="Studies have shown that blue light stimulates the human circadian rhythm. You may notice that at a certain time, some electronic devices' screens aquire an orange tint. Because orange is the opposite of blue, it blocks some of the display's blue light, aiding sleep. BrowserPlus's coffee mode does the opposite, using blue light to awaken you by stimulating your circadian rhythm." class="toolbutton" type="button" value="Toggle Coffee Mode" id="toggleCoffeeMode" onclick="toggleCoffeeMode()">
             <h3>About</h3>
-            <input class="toolbutton" type="button" value="View Version Information" id="versionInfoViewer" onclick="versionInfoView()">
-            <input class="toolbutton" type="button" value="Open GitHub Page" onclick="aboutInBrowser()">
-            <input class="toolbutton" type="button" value="Report an Issue" onclick="reportIssues()">
+            <input class="toolbutton" externallink="true" type="button" value="View Version Information" id="versionInfoViewer" onclick="versionInfoView()">
+            <input class="toolbutton" externallink="true" type="button" value="Open GitHub Page" onclick="aboutInBrowser()">
+            <input class="toolbutton" externallink="true" type="button" value="Report an Issue" onclick="reportIssues()">
             <h2 class="non-browser" id="browserheader">Browser</h2>
         </div>
         <div id="subbrowsercontent">
             <input type="button" id="browserfullscreen" value="Fullscreen" onclick="fullscreen()">
             <input type="url" placeholder="Enter URL to navigate" id="navurl">
             <input type="button" value="Navigate" id="navigationbutton" onclick="nav(document.getElementById('navurl').value)">
-            <input type="button" value="&#8635" id="refreshbutton" onclick="refreshiframe()">
+            <input type="button" title="Refresh the content of your browser. Please note: the refresh button will refresh the frame by re-navigating to the last URL that you entered in the 'Enter URL' field" value="&#8635" id="refreshbutton" onclick="refreshiframe()">
             <p id="currentURL" >Last Navigated URL: https://www.bing.com/</p>
         </div>
         <img src="Loading.gif" hidden id="loading">
