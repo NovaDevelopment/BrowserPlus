@@ -1,5 +1,5 @@
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    window.location.replace("MobilePage.html")
+    window.location.replace("Mobile/MobilePage.html")
 }
 if (document.cookie.replace(/(?:(?:^|.*;\s*)disclaimerDisplayed\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
     if(window.confirm("By using this site, you agree that you have read and understand the Disclaimers and Terms section of the document, README.md, in the GitHub repository that contains the contents of this site. If you have not done so, you must complete this action before using the site. You will be redirected to GitHub in order to read the document. After reading, you may return to BrowserPlus and use it.")){
@@ -11,6 +11,7 @@ if (document.cookie.replace(/(?:(?:^|.*;\s*)disclaimerDisplayed\s*\=\s*([^;]*).*
             window.location.replace("about:blank");
         }
 }
+console.log(" ____                                         _____   _             \r\n|  _ \\                                       |  __ \\ | |            \r\n| |_) | _ __  ___ __      __ ___   ___  _ __ | |__) || | _   _  ___ \r\n|  _ < | \'__|\/ _ \\\\ \\ \/\\ \/ \/\/ __| \/ _ \\| \'__||  ___\/ | || | | |\/ __|\r\n| |_) || |  | (_) |\\ V  V \/ \\__ \\|  __\/| |   | |     | || |_| |\\__ \\\r\n|____\/ |_|   \\___\/  \\_\/\\_\/  |___\/ \\___||_|   |_|     |_| \\__,_||___\/\r\n\r\nThank you for using the BrowserPlus developer features. If you are debugging a specific problem, please report the issue at https://github.com/ZelnickB/BrowserPlus/issues. If you do not know how to use the OpenConsole features integrated into BrowserPlus, you can find instructions at https://github.com/ZelnickB/BrowserPlus/wiki/Using-OpenConsole. Please let us know if you find anything interesting!");
 var isfullscreen = false;
 var isblurred = false;
 var isDarkMode = false;
@@ -20,7 +21,7 @@ function fullscreen() {
     if(isfullscreen == false) {
         document.getElementById("non-browser").hidden = "true";
         document.getElementById("browserfullscreen").value = "Exit Fullscreen";
-        document.getElementById("frame").style = "height: 504px!important;";
+        document.getElementById("frame").style = "height: 875px!important;";
         document.getElementById("browserfullscreen").style = "width: 90px!important; margin-bottom: 10px; cursor: zoom-out!important;"
         isfullscreen = true;
     }
@@ -33,7 +34,7 @@ function fullscreen() {
         }
 }
 function nav(navigationURL) {
-    if(navigationURL == "") {
+    if(navigationURL == "http://" || navigationURL == "" || navigationURL == "https://" || navigationURL == "http://www." || navigationURL == "https://www.") {
         alert("Please enter a URL to navigate.");
         document.getElementById("navurl").style = "background-color: red!important; color: white!important";
     }
@@ -45,7 +46,7 @@ function nav(navigationURL) {
             document.getElementById("navurl").removeAttribute("style");
             document.getElementById("frame").src = navigationURL;
             document.getElementById("currentURL").innerHTML = "Last Navigated URL: " + navigationURL;
-            document.getElementById("navurl").value = "";
+            document.getElementById("navurl").value = "http://";
         }
         return 'Command executed.';
 }

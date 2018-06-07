@@ -7,7 +7,7 @@ var isblurred = false;
 var isDarkMode = false;
 var toolsHidden = false;
 function nav(navigationURL) {
-    if(navigationURL == "") {
+    if(navigationURL == "http://" || navigationURL == "" || navigationURL == "https://" || navigationURL == "http://www." || navigationURL == "https://www.") {
         alert("Please enter a URL to navigate.");
         document.getElementById("navurl").style = "background-color: red!important; color: white!important";
     }
@@ -15,7 +15,7 @@ function nav(navigationURL) {
             document.getElementById("navurl").removeAttribute("style");
             document.getElementById("frame").src = navigationURL;
             document.getElementById("currentURL").innerHTML = "Last Navigated URL: " + navigationURL;
-            document.getElementById("navurl").value = "";
+            document.getElementById("navurl").value = "http://";
         }
         return "Command executed.";
 }

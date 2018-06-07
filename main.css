@@ -1,5 +1,5 @@
 html {
-    background: linear-gradient(135deg, red 0%, orange 100%);
+    background: linear-gradient(135deg, orange 0%, red 100%);
     font-family: 'Open Sans', sans-serif;
     width: 100%;
     min-height: 100%;
@@ -30,12 +30,9 @@ input[type=button]{
     width: 5%;
     cursor: zoom-in;
 }
-#loading {
-    width: 250px;
-    height: 250px;
-}
 #windowClose {
-    background-color: firebrick;
+    background-color: aquamarine;
+    cursor: url('Custom Cursors/Close%20Cursor.png'), pointer;
 }
 #navigationbutton {
     width: 4.5%;
