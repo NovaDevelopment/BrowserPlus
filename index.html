@@ -35,10 +35,10 @@
         </div>
         <div id="subbrowsercontent">
             <input type="button" id="browserfullscreen" value="Fullscreen" onclick="fullscreen()">
-            <input type="url" placeholder="Enter URL to navigate" id="navurl">
+            <input type="url" placeholder="Enter URL to navigate" value="http://www." id="navurl">
             <input type="button" value="Navigate" id="navigationbutton" onclick="nav(document.getElementById('navurl').value)">
             <input type="button" title="Refresh the content of your browser. Please note: the refresh button will refresh the frame by re-navigating to the last URL that you entered in the 'Enter URL' field" value="&#8635" id="refreshbutton" onclick="refreshiframe()">
-            <p id="currentURL" >Last Navigated URL: https://www.bing.com/</p>
+            <p id="currentURL">Last Navigated URL: https://www.bing.com/</p>
         </div>
         <img src="Loading.gif" hidden id="loading">
         <iframe onload="loadedframe()" id="frame" src="https://www.bing.com/"></iframe>
