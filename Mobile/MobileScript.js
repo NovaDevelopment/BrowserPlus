@@ -15,7 +15,7 @@ function nav(navigationURL) {
             document.getElementById("navurl").removeAttribute("style");
             document.getElementById("frame").src = navigationURL;
             document.getElementById("currentURL").innerHTML = "Last Navigated URL: " + navigationURL;
-            document.getElementById("navurl").value = "http://";
+            document.getElementById("navurl").value = "http://www.";
         }
         return "Command executed.";
 }
