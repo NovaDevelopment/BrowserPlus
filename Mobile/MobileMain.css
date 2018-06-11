@@ -1,6 +1,6 @@
 html {
     font-family: "Open Sans";
-    background: linear-gradient(135deg, blue 0%, purple 100%);
+    background: linear-gradient(135deg, rgb(255, 45, 85) 0%, rgb(88, 86, 214) 100%);
     color: white;
     font-size: 30px;
     min-height: 100%;

@@ -11,9 +11,14 @@
           gtag('config', 'UA-111689131-1');
         </script>
         <title id="browsertabtitle">BrowserPlus Mobile</title>
-        <link rel="shortcut icon" href="SmartPhone%20Icon.ico">
+        <link rel="shortcut icon" href="/favicon.ico">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <link rel="stylesheet" href="MobileMain.css" type="text/css">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="apple-touch-startup-image" href="apple-touch-icon.png">
+        <meta name="apple-mobile-web-app-title" content="BrowserPlus">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
     </head>
     <body>
         <h1>BrowserPlus Mobile</h1>
@@ -29,7 +34,7 @@
             <input class="toolbutton" type="button" value="Open GitHub Page" onclick="aboutInBrowser()">
         </div>
         <br>
-        <input id="navurl" type="text" placeholder="Enter full URL, including 'http://' or 'https://'" value="http://">
+        <input id="navurl" type="text" placeholder="Enter full URL, including 'http://' or 'https://'" value="http://www.">
         <input class="miscellaneousbutton" id="navbutton" type="button" value="Navigate" onclick="nav(document.getElementById('navurl').value)">
         <br>
         <p id="currentURL">Last Navigated URL: https://www.bing.com/</p>
