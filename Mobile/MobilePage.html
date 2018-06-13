@@ -23,7 +23,8 @@
     <body>
         <h1>BrowserPlus Mobile</h1>
         <p id="disclaimer" hidden="true">Before using BrowserPlus, it is your responsibility to read the README.md document on <a href="https://github.com/ZelnickB/BrowserPlus#browserplus">GitHub</a>.</p>
-        <p id="experiencenote" hidden="true">For a more through experience, access BrowserPlus, on a desktop, laptop, Mac, etc.</p>
+        <p id="experiencenote" hidden="true">For a more thorough experience, access BrowserPlus, on a desktop, laptop, Mac, etc.</p>
+        <p id="webappnote" hidden="true">BrowserPlus offers an application for iOS. Simply install the free application using Safari. Go to the "share" icon at the bottom of your screen and find the option for adding the site to your home screen. A shortcut to the app will be installed on your homescreen. <i>Please note that this will not simply save a shortcut to your home screen, but it will also install a web application on your device. It does not take up significant storage.</i></p>
         <input class="miscellaneousbutton" type="button" value="Hide Tools" id="hideTools" onclick="hideTools()">
         <div id="tools">
             <h3>Privacy</h3>
@@ -39,6 +40,7 @@
         <br>
         <p id="currentURL">Last Navigated URL: https://www.bing.com/</p>
         <input id="refresh" type="button" value="&#8635" onclick="refreshiframe()">
+        <img onload="loadedframe()" src="/Loading.gif" hidden id="loading">
         <iframe src="https://www.bing.com/" id="frame"></iframe>
     </body>
     <script src="MobileScript.js"></script>

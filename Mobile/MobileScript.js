@@ -1,7 +1,11 @@
-if (document.cookie.replace(/(?:(?:^|.*;\s*)inlineDisclaimerDisplayed\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
+if (document.cookie.replace(/(?:(?:^|.*;\s*)inlineDataDisplayed\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
     document.getElementById("disclaimer").removeAttribute("hidden");
     document.getElementById("experiencenote").removeAttribute("hidden");
-    document.cookie = "inlineDisclaimerDisplayed=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+    var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    if(iOS == true){
+        document.getElementById("webappnote").removeAttribute("hidden");
+    }
+    document.cookie = "inlineDataDisplayed=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
 }
 var isblurred = false;
 var isDarkMode = false;
@@ -14,10 +18,16 @@ function nav(navigationURL) {
         else {
             document.getElementById("navurl").removeAttribute("style");
             document.getElementById("frame").src = navigationURL;
+            document.getElementById("frame").hidden = "true";
+            document.getElementById("loading").removeAttribute("hidden");
             document.getElementById("currentURL").innerHTML = "Last Navigated URL: " + navigationURL;
             document.getElementById("navurl").value = "http://www.";
         }
         return "Command executed.";
+}
+function loadedframe() {
+    document.getElementById("frame").removeAttribute("hidden");
+    document.getElementById("loading").hidden = "true";
 }
 function refreshiframe() {
     nav(document.getElementById("frame").src)
