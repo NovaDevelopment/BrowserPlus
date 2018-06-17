@@ -40,7 +40,6 @@ function nav(navigationURL) {
     }
         else {
             document.getElementById("browsertabtitle").innerHTML = "Loading...";
-            document.getElementById("html").style = "cursor: wait!important;"
             document.getElementById("frame").hidden = "true";
             document.getElementById("loading").removeAttribute("hidden");
             document.getElementById("navurl").removeAttribute("style");
@@ -56,7 +55,6 @@ function refreshiframe() {
 function loadedframe() {
     document.getElementById("browsertabtitle").innerHTML = "Browser+";
     document.getElementById("frame").removeAttribute("hidden");
-    document.getElementById("html").removeAttribute("style");
     document.getElementById("loading").hidden = "true";
 }
 function blurcontent() {
