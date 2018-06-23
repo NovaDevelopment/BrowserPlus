@@ -6,22 +6,27 @@ permalink: /404.html
     <head>
         <link rel="shortcut icon" href="Error%20Icon.png">
         <title>404 Error | BrowserPlus</title>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Questrial" rel="stylesheet">
         <style>
             html {
                 background: linear-gradient(0deg, darkred 0%, red 100%);
                 min-height: 100%;
-                font-family: "Open Sans";
+                font-family: "Questrial";
+            }
+            mono {
+                font-family: monospace, "IBM Plex Mono";
             }
             .sub {
                 text-align: center;
                 font-size: 24px;
+                margin-top: 0px;
+                margin-bottom: 20px;
             }
             #main-title {
                 font-size: 200px;
-                font-weight: bold;
                 text-align: center;
-                margin: 10px;
+                margin: 15px;
+                margin-bottom: 0px;
             }
         </style>
     </head>
@@ -29,6 +34,7 @@ permalink: /404.html
         <p id="main-title">404</p>
         <p class="sub">That's an error.</p>
         <p class="sub">BrowserPlus could not locate the page that you were looking for. Sorry about that! Please check the URL that you entered.</p>
-        <p class="sub">In HTTP (HyperText Transfer Protocol), the error is <kbd>Cannot GET</kbd><span style="font-style: italic;"> the page that you were looking for</span></p>
+        <p class="sub">In HTTP (HyperText Transfer Protocol), the error is <mono>Cannot GET<span style="font-style: italic;"> the page that you were looking for</span></mono></p>
+        <p class="sub">Most likely, you typed in a wrong URL. Remember that just a single incorrect letter can cause this error. Check your URL and try again.</p>
     </body>
 </html>
