@@ -11,6 +11,9 @@ a {
 h1 {
     font-size: 60px;
 }
+input[type = button] {
+    border-radius: 0px;
+}
 .toolbutton {
     border-width: 0px;
     padding: 3px;
