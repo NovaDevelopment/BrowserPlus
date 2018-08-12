@@ -31,8 +31,8 @@ input[type=button]{
     cursor: zoom-in;
 }
 #windowClose {
-    background-color: aquamarine;
-    cursor: url('Custom Cursors/Close%20Cursor.png'), pointer;
+    background-color: #00ddff;
+    border-width: 1px;
 }
 #navigationbutton {
     width: 4.5%;
@@ -45,6 +45,7 @@ input[type=button]{
     background: linear-gradient(135deg, lime 0%, green 100%);
     padding: 3px;
     border-width: 0px;
+    border-radius: 10px;
 }
 .toolbutton {
     margin-right: 5px;
