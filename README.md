@@ -8,7 +8,7 @@ This section does *not* contain information on how to use the software, only inf
 * BrowserPlus can also be used for bypassing web filters enforced by an employer, organization, etc., **if** the website version is used. @ZelnickB or @NebulaDevelopment (organization) *cannot and will not* be responsible for any losses, damages, etc. that arise from using the software for this reason.
 * **Websites are able to read/write cookies on your computer while browsing through BrowserPlus.**
 ### Open Source Terms
-* Open source **must** be posted via GitHub with an "@ZelnickB" mention and a "@NebulaDevelopment" mention within the README.md document of the version
+* Open source **must** be posted via GitHub with an "@ZelnickB" mention and a "@NebulaDevelopment" mention within the description of the repository
 * **Attributions to @ZelnickB  AND @NebulaDevelopment (organization)  are required. By using and accessing this GitHub page, you agree to attribute the author if you modify any of the documents, including script, stylesheets, etc. within this project.**
 * You must include the author, @ZelnickB's, name at the bottom of modified code pages.
 * You must include the organization, @NebulaDevelopment's, name at the bottom of the modified code pages.
