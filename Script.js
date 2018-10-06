@@ -4,14 +4,14 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 if (document.cookie.replace(/(?:(?:^|.*;\s*)disclaimerDisplayed\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
     if(window.confirm("By using this site, you agree that you have read and understand the Disclaimers and Terms section of the document, README.md, in the GitHub repository that contains the contents of this site. If you have not done so, you must complete this action before using the site. You will be redirected to GitHub in order to read the document. After reading, you may return to BrowserPlus and use it.")){
         document.cookie = "disclaimerDisplayed=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-        window.location.replace("https://github.com/ZelnickB/BrowserPlus#browserplus");
+        window.location.replace("https://github.com/nebuladevelopment/BrowserPlus#browserplus");
     }
         else {
             close();
             window.location.replace("about:blank");
         }
 }
-console.log(" ____                                         _____   _             \r\n|  _ \\                                       |  __ \\ | |            \r\n| |_) | _ __  ___ __      __ ___   ___  _ __ | |__) || | _   _  ___ \r\n|  _ < | \'__|\/ _ \\\\ \\ \/\\ \/ \/\/ __| \/ _ \\| \'__||  ___\/ | || | | |\/ __|\r\n| |_) || |  | (_) |\\ V  V \/ \\__ \\|  __\/| |   | |     | || |_| |\\__ \\\r\n|____\/ |_|   \\___\/  \\_\/\\_\/  |___\/ \\___||_|   |_|     |_| \\__,_||___\/\r\n\r\nThank you for using the BrowserPlus developer features. If you are debugging a specific problem, please report the issue at https://github.com/ZelnickB/BrowserPlus/issues. If you do not know how to use the OpenConsole features integrated into BrowserPlus, you can find instructions at https://github.com/ZelnickB/BrowserPlus/wiki/Using-OpenConsole. Please let us know if you find anything interesting!");
+console.log(" ____                                         _____   _             \r\n|  _ \\                                       |  __ \\ | |            \r\n| |_) | _ __  ___ __      __ ___   ___  _ __ | |__) || | _   _  ___ \r\n|  _ < | \'__|\/ _ \\\\ \\ \/\\ \/ \/\/ __| \/ _ \\| \'__||  ___\/ | || | | |\/ __|\r\n| |_) || |  | (_) |\\ V  V \/ \\__ \\|  __\/| |   | |     | || |_| |\\__ \\\r\n|____\/ |_|   \\___\/  \\_\/\\_\/  |___\/ \\___||_|   |_|     |_| \\__,_||___\/\r\n\r\nThank you for using the BrowserPlus developer features. If you are debugging a specific problem, please report the issue at https://github.com/nebuladevelopment/BrowserPlus/issues. If you do not know how to use the OpenConsole features integrated into BrowserPlus, you can find instructions at https://github.com/nebuladevelopment/BrowserPlus/wiki/Using-OpenConsole. Please let us know if you find anything interesting!");
 var isfullscreen = false;
 var isblurred = false;
 var isDarkMode = false;
@@ -147,11 +147,11 @@ function versionInfoView() {
 }
 function aboutInBrowser() {
     if(window.confirm("This page will not be opened in BrowserPlus, thus voiding all privacy features. Are you sure that you want to proceed?")) {
-        window.open("https://github.com/ZelnickB/BrowserPlus");
+        window.open("https://github.com/nebuladevelopment/BrowserPlus");
     }
 }
 function reportIssues() {
     if(window.confirm("This page will not be opened in BrowserPlus, thus voiding all privacy features. Are you sure that you want to proceed?")) {
-        window.open("https://github.com/ZelnickB/BrowserPlus/issues");
+        window.open("https://github.com/nebuladevelopment/BrowserPlus/issues");
     }
 }
