@@ -69,7 +69,7 @@ function toggleDarkMode() {
 }
 function aboutInBrowser() {
     if(window.confirm("This page will not be opened in BrowserPlus, thus voiding all privacy features. Are you sure that you want to proceed?")) {
-        window.open("https://github.com/nebuladevelopment/BrowserPlus");
+        window.open("https://github.com/NovaDevelopment/BrowserPlus");
     }
 }
 function hideTools() {
