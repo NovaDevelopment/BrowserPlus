@@ -20,29 +20,35 @@ var isCoffeeMode = false;
 function fullscreen() {
     if(isfullscreen == false) {
         document.getElementById("non-browser").hidden = "true";
-        document.getElementById("browserfullscreen").value = "Exit Fullscreen";
-        document.getElementById("frame").style = "height: 875px!important;";
-        document.getElementById("browserfullscreen").style = "width: 90px!important; margin-bottom: 10px; cursor: zoom-out!important;"
+        document.getElementById("browserfullscreen").value = "Exit Fullwindow";
+        document.getElementById("frame").style.height = "1080px";
+        document.getElementById("browserfullscreen").style.width = "90px"
+        document.getElementById("browserfullscreen").style.marginBottom = "10px"
+        document.getElementById("browserfullscreen").style.cursor = "zoom-out";
         isfullscreen = true;
     }
         else {
             document.getElementById("non-browser").removeAttribute("hidden");
-            document.getElementById("frame").removeAttribute("style");
-            document.getElementById("browserfullscreen").removeAttribute("style");
-            document.getElementById("browserfullscreen").value = "Fullscreen";
+            document.getElementById("frame").style.height = "";
+            document.getElementById("browserfullscreen").style.width = ""
+            document.getElementById("browserfullscreen").style.marginBottom = ""
+            document.getElementById("browserfullscreen").style.cursor = "";
+            document.getElementById("browserfullscreen").value = "Fullwindow";
             isfullscreen = false;
         }
 }
 function nav(navigationURL) {
     if(navigationURL == "http://" || navigationURL == "" || navigationURL == "https://" || navigationURL == "http://www." || navigationURL == "https://www.") {
         alert("Please enter a URL to navigate.");
-        document.getElementById("navurl").style = "background-color: red!important; color: white!important";
+        document.getElementById("navurl").style.backgroundColor = "red";
+        document.getElementById("navurl").style.color = "white";
     }
         else {
             document.getElementById("browsertabtitle").innerHTML = "Loading...";
             document.getElementById("frame").hidden = "true";
             document.getElementById("loading").removeAttribute("hidden");
-            document.getElementById("navurl").removeAttribute("style");
+            document.getElementById("navurl").style.backgroundColor = "";
+            document.getElementById("navurl").style.color = "";
             document.getElementById("frame").src = navigationURL;
             document.getElementById("currentURL").innerHTML = "Last Navigated URL: " + navigationURL;
             document.getElementById("navurl").value = "http://www.";
@@ -59,24 +65,26 @@ function loadedframe() {
 }
 function blurcontent() {
    if(isblurred == false){
-        document.getElementById("frame").style = "filter: blur(20px)!important;";
-        document.getElementById("currentURL").style = "filter: blur(20px)!important;";
+        document.getElementById("frame").style.filter = "blur(20px)";
+        document.getElementById("currentURL").style.filter = "blur(20px)";
         document.getElementById("refreshbutton").disabled = "true";
-        document.getElementById("refreshbutton").style = "filter: blur(10px)!important; cursor: not-allowed!important;"
+        document.getElementById("refreshbutton").style.filter = "blur(10px)";
+        document.getElementById("refreshbutton").style.cursor = "cursor: not-allowed";
         document.getElementById("blur").value = "Undo Privacy Blur";
         isblurred = true;
     }
         else{
-            document.getElementById("frame").removeAttribute("style");
-            document.getElementById("currentURL").removeAttribute("style");
+            document.getElementById("frame").style.filter = "";
+            document.getElementById("currentURL").style.filter = "";
+            document.getElementById("refreshbutton").style.filter = "";
+            document.getElementById("refreshbutton").style.cursor = "";
             document.getElementById("refreshbutton").removeAttribute("disabled");
-            document.getElementById("refreshbutton").removeAttribute("style");
             document.getElementById("blur").value = "Privacy Blur";
             isblurred = false;
         }
 }
 function windowclose() {
-    document.getElementById("html").style="filter: blur(50px)!important;"
+    document.getElementById("html").style.filter="blur(50px)"
     close();
     console.clear();
     window.location.replace("about:blank");
@@ -88,25 +96,29 @@ function clearData() {
 }
 function toggleDarkMode() {
     if(isDarkMode == false){
-        document.getElementById("html").style="color: white!important; background: black!important;";
+        document.getElementById("html").style.color="white";
+        document.getElementById("html").style.background="black";
         isDarkMode = true;
         isSimpleMode = false;
         isCoffeeMode = false;
     }
         else{
-            document.getElementById("html").removeAttribute("style");
+            document.getElementById("html").style.color="";
+            document.getElementById("html").style.background="";
             isDarkMode = false;
         }
 }
 function toggleSimpleMode() {
     if(isSimpleMode == false){
-        document.getElementById("html").style="background: white!important; font-family:none!important";
+        document.getElementById("html").style.background="none";
+        document.getElementById("html").fontFamily="none";
         isSimpleMode = true;
         isDarkMode = false;
         isCoffeeMode = false;
     }
         else{
-            document.getElementById("html").removeAttribute("style");
+            document.getElementById("html").style.background="";
+            document.getElementById("html").fontFamily="";
             isSimpleMode = false;
         }
 }
@@ -115,25 +127,25 @@ function toggleCoffeeMode() {
             alert("Studies have shown that blue light stimulates the human circadian rhythm. You may notice that at a certain time, some electronic devices' screens aquire an orange tint. Because orange is the opposite of blue, it blocks some of the display's blue light, aiding sleep. BrowserPlus's coffee mode does the opposite, using blue light to awaken you by stimulating your circadian rhythm.");
             document.cookie = "CoffeeInfo=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
                 if(isCoffeeMode == false){
-                    document.getElementById("html").style="background: linear-gradient(135deg, aqua 0%, blue 50%, darkblue 100%);";
+                    document.getElementById("html").style.background="linear-gradient(135deg, rgb(0,176,240) 0%, rgb(0,112,192) 100%)";
                     isCoffeeMode = true;
                     isSimpleMode = false;
                     isDarkMode = false;
                 }
                     else{
-                        document.getElementById("html").removeAttribute("style");
+                        document.getElementById("html").style.background="";
                         isCoffeeMode = false;
                     }
         }
             else {
                 if(isCoffeeMode == false){
-                    document.getElementById("html").style="background: linear-gradient(135deg, aqua 0%, blue 50%, darkblue 100%);";
+                    document.getElementById("html").style.background="linear-gradient(135deg, rgb(0,176,240) 0%, rgb(0,112,192) 100%)";
                     isCoffeeMode = true;
                     isSimpleMode = false;
                     isDarkMode = false;
                 }
                     else{
-                        document.getElementById("html").removeAttribute("style");
+                        document.getElementById("html").style.background="";
                         isCoffeeMode = false;
                     }
             }
