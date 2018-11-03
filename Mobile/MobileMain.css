@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 html {
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     background: linear-gradient(135deg, rgb(255, 45, 85) 0%, rgb(88, 86, 214) 100%);
     color: white;
     font-size: 30px;

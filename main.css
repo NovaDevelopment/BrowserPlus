@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 html {
     background: linear-gradient(135deg, orange 0%, red 100%);
     font-family: 'Open Sans', sans-serif;
@@ -5,8 +6,18 @@ html {
     min-height: 100%;
     background-size: cover;
 }
+input {
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px;
+}
 input[type=button]{
     cursor: pointer;
+    background: rgb(255,255,255);
+    border-width: 0px;
+}
+input[type=button]:hover {
+    animation: normalButton forwards;
+    animation-duration: 3s;
 }
 .toolbutton[externallink=true] {
     cursor: alias;
@@ -18,24 +29,49 @@ input[type=button]{
     align-content: center;
 }
 #navurl {
-    width: 85%;
+    width: 84%;
     margin-right: 0.1%;
+}
+#navurl:hover {
+    animation: urlBar forwards;
+    animation-duration: 3s;
+}
+#navurl:focus {
+    opacity: 0.5;
 }
 #browserfullscreen {
     margin-right: 0.5%;
-    padding: 3px;
     background: linear-gradient(135deg, blue 0%, purple 100%);
     color: white;
-    border-width: 0px;
-    width: 5%;
+    width: 6%;
     cursor: zoom-in;
+    animation: none;
+}
+#blur:hover {
+    animation: privacyBlur forwards;
+    animation-duration: 3s;
 }
 #windowClose {
-    background-color: #00ddff;
-    border-width: 1px;
+    background: #00ddff;
+}
+#windowClose:hover {
+    animation: windowClose forwards;
+    animation-duration: 3s;
+}
+#quickRemove:hover {
+    animation: dataRemove forwards;
+    animation-duration: 3s;
 }
 #navigationbutton {
     width: 4.5%;
+}
+#navigationbutton:hover {
+    animation: navigate forwards;
+    animation-duration: 3s;
+}
+#toggleDarkMode:hover {
+    animation: darkMode forwards;
+    animation-duration: 3s;
 }
 #refreshbutton {
     font-weight: bold;
@@ -45,8 +81,9 @@ input[type=button]{
     background: linear-gradient(135deg, lime 0%, green 100%);
     padding: 3px;
     border-width: 0px;
-    border-radius: 10px;
+    border-radius: 100px;
+    animation: none;
 }
 .toolbutton {
-    margin-right: 5px;
+    margin: 0px;
 }

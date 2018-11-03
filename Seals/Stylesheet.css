@@ -1,25 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
 /* Custom Animations */
 @keyframes buttonMorph {
     50% {
-        background-color: rgb(118, 195, 215);
+        background: rgb(118, 195, 215);
     }
     100% {
-        background-color: blue;
+        background: blue;
         color: white;
     }
 }
 @keyframes buttonMorphVerPage {
     50% {
-        background-color: rgb(118, 195, 215);
+        background: rgb(118, 195, 215);
     }
     100% {
-        background-color: rgb(0, 132, 66);
+        background: rgb(0, 132, 66);
         color: white;
     }
 }
 @keyframes resetButtonMorphVerPage {
     100% {
-        background-color: rgb(255, 184, 184);
+        background: rgb(255, 184, 184);
     }
 }
 @keyframes fade {
