@@ -1,0 +1,39 @@
+@keyframes normalButton {
+    100% {
+        background: rgb(143,255,194);
+    }
+}
+@keyframes privacyBlur {
+    100% {
+        filter: blur(20px);
+        background: rgb(143,255,194);
+    }
+}
+@keyframes windowClose {
+    100% {
+        background: red;
+        color: rgb(220,220,220);
+    }
+}
+@keyframes dataRemove {
+    100% {
+        color: transparent;
+    }
+}
+@keyframes darkMode {
+    100% {
+        background: black;
+        color: white;
+    }
+}
+@keyframes urlBar {
+    100% {
+        opacity: 0.5;
+    }
+}
+@keyframes navigate {
+    100% {
+        background: rgb(0,176,80);
+        color: white;
+    }
+}
