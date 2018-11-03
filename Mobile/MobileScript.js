@@ -13,10 +13,12 @@ var toolsHidden = false;
 function nav(navigationURL) {
     if(navigationURL == "http://" || navigationURL == "" || navigationURL == "https://" || navigationURL == "http://www." || navigationURL == "https://www.") {
         alert("Please enter a URL to navigate.");
-        document.getElementById("navurl").style = "background-color: red!important; color: white!important";
+        document.getElementById("navurl").style.backgroundColor = "red";
+        document.getElementById("navurl").style.color = "white";
     }
         else {
-            document.getElementById("navurl").removeAttribute("style");
+            document.getElementById("navurl").style.backgroundColor = "";
+            document.getElementById("navurl").style.color = "";
             document.getElementById("frame").src = navigationURL;
             document.getElementById("frame").hidden = "true";
             document.getElementById("loading").removeAttribute("hidden");
@@ -34,16 +36,18 @@ function refreshiframe() {
 }
 function blurcontent() {
    if(isblurred == false){
-        document.getElementById("frame").style = "filter: blur(20px)!important;";
-        document.getElementById("currentURL").style = "filter: blur(20px)!important;";
+        document.getElementById("frame").style.filter = "blur(20px)";
+        document.getElementById("currentURL").style.filter = "blur(20px)";
         document.getElementById("blur").value = "Undo Privacy Blur";
         document.getElementById("refresh").disabled = "true";
-        document.getElementById("refresh").style = "filter: blur(20px)!important;"
+        document.getElementById("refresh").style.filter = "blur(20px)"
         isblurred = true;
     }
         else{
-            document.getElementById("frame").removeAttribute("style");
-            document.getElementById("currentURL").removeAttribute("style");
+            document.getElementById("frame").style.filter = "";
+            document.getElementById("currentURL").style.filter = "";
+            document.getElementById("refresh").style.filter = "";
+            document.getElementById("refresh").style.cursor = "";
             document.getElementById("blur").value = "Privacy Blur";
             document.getElementById("refresh").removeAttribute("disabled");
             document.getElementById("refresh").removeAttribute("style");
@@ -57,13 +61,13 @@ function clearData() {
 }
 function toggleDarkMode() {
     if(isDarkMode == false){
-        document.getElementById("html").style="background: black!important;";
+        document.getElementById("html").style.background="black";
         isDarkMode = true;
         isSimpleMode = false;
         isCoffeeMode = false;
     }
         else{
-            document.getElementById("html").removeAttribute("style");
+            document.getElementById("html").style.background="";
             isDarkMode = false;
         }
 }
@@ -76,13 +80,13 @@ function hideTools() {
     if(toolsHidden == false){
         document.getElementById("tools").hidden="true";
         document.getElementById("hideTools").value="Unhide Tools";
-        document.getElementById("frame").style="height: 710px!important;";
+        document.getElementById("frame").style.height="710px";
         toolsHidden = true;
     }
         else{
             document.getElementById("tools").removeAttribute("hidden");
             document.getElementById("hideTools").value="Hide Tools"
-            document.getElementById("frame").removeAttribute("style");
+            document.getElementById("frame").style.height="";
             toolsHidden = false;
         }
 }
