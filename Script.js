@@ -11,7 +11,7 @@ if (document.cookie.replace(/(?:(?:^|.*;\s*)disclaimerDisplayed\s*\=\s*([^;]*).*
             window.location.replace("about:blank");
         }
 }
-console.log(" ____                                         _____   _             \r\n|  _ \\                                       |  __ \\ | |            \r\n| |_) | _ __  ___ __      __ ___   ___  _ __ | |__) || | _   _  ___ \r\n|  _ < | \'__|\/ _ \\\\ \\ \/\\ \/ \/\/ __| \/ _ \\| \'__||  ___\/ | || | | |\/ __|\r\n| |_) || |  | (_) |\\ V  V \/ \\__ \\|  __\/| |   | |     | || |_| |\\__ \\\r\n|____\/ |_|   \\___\/  \\_\/\\_\/  |___\/ \\___||_|   |_|     |_| \\__,_||___\/\r\n\r\nThank you for using the BrowserPlus developer features. If you are debugging a specific problem, please report the issue at https://github.com/NovaDevelopment/BrowserPlus/issues. If you do not know how to use the OpenConsole features integrated into BrowserPlus, you can find instructions at https://github.com/NovaDevelopment/BrowserPlus/wiki/Using-OpenConsole. Please let us know if you find anything interesting!");
+console.log(" ____                                         _____   _             |  _ \\                                       |  __ \\ | |            \r\n| |_) | _ __  ___ __      __ ___   ___  _ __ | |__) || | _   _  ___ \r\n|  _ < | \'__|\/ _ \\\\ \\ \/\\ \/ \/\/ __| \/ _ \\| \'__||  ___\/ | || | | |\/ __|\r\n| |_) || |  | (_) |\\ V  V \/ \\__ \\|  __\/| |   | |     | || |_| |\\__ \\\r\n|____\/ |_|   \\___\/  \\_\/\\_\/  |___\/ \\___||_|   |_|     |_| \\__,_||___\/\r\n\r\nThank you for using the BrowserPlus developer features. If you are debugging a specific problem, please report the issue at https://github.com/NovaDevelopment/BrowserPlus/issues. If you do not know how to use the OpenConsole features integrated into BrowserPlus, you can find instructions at https://github.com/NovaDevelopment/BrowserPlus/wiki/Using-OpenConsole. Please let us know if you find anything interesting!");
 var isfullscreen = false;
 var isblurred = false;
 var isDarkMode = false;
@@ -94,43 +94,17 @@ function clearData() {
     document.getElementById("frame").src = "splashpage.html";
     console.clear();
 }
-function toggleDarkMode() {
-    if(isDarkMode == false){
-        document.getElementById("html").style.color="white";
-        document.getElementById("html").style.background="black";
-        isDarkMode = true;
-        isSimpleMode = false;
-        isCoffeeMode = false;
-    }
-        else{
-            document.getElementById("html").style.color="";
-            document.getElementById("html").style.background="";
-            isDarkMode = false;
-        }
-}
-function toggleSimpleMode() {
-    if(isSimpleMode == false){
-        document.getElementById("html").style.background="none";
-        document.getElementById("html").fontFamily="none";
-        isSimpleMode = true;
-        isDarkMode = false;
-        isCoffeeMode = false;
-    }
-        else{
-            document.getElementById("html").style.background="";
-            document.getElementById("html").fontFamily="";
-            isSimpleMode = false;
-        }
-}
 function toggleCoffeeMode() {
     if (document.cookie.replace(/(?:(?:^|.*;\s*)CoffeeInfo\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
             alert("Studies have shown that blue light stimulates the human circadian rhythm. You may notice that at a certain time, some electronic devices' screens aquire an orange tint. Because orange is the opposite of blue, it blocks some of the display's blue light, aiding sleep. BrowserPlus's coffee mode does the opposite, using blue light to awaken you by stimulating your circadian rhythm.");
             document.cookie = "CoffeeInfo=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
                 if(isCoffeeMode == false){
                     document.getElementById("html").style.background="linear-gradient(135deg, rgb(0,176,240) 0%, rgb(0,112,192) 100%)";
+                    document.getElementById("html").style.color="";
+                    document.getElementById("html").style.fontFamily="";
                     isCoffeeMode = true;
-                    isSimpleMode = false;
                     isDarkMode = false;
+                    isSimpleMode = false;
                 }
                     else{
                         document.getElementById("html").style.background="";
@@ -140,15 +114,47 @@ function toggleCoffeeMode() {
             else {
                 if(isCoffeeMode == false){
                     document.getElementById("html").style.background="linear-gradient(135deg, rgb(0,176,240) 0%, rgb(0,112,192) 100%)";
+                    document.getElementById("html").style.color="";
+                    document.getElementById("html").style.fontFamily="";
                     isCoffeeMode = true;
-                    isSimpleMode = false;
                     isDarkMode = false;
+                    isSimpleMode = false;
                 }
                     else{
                         document.getElementById("html").style.background="";
                         isCoffeeMode = false;
                     }
             }
+}
+function toggleDarkMode() {
+    if(isDarkMode == false){
+        document.getElementById("html").style.background="black";
+        document.getElementById("html").style.color="white";
+        document.getElementById("html").style.fontFamily="";
+        isCoffeeMode = false;
+        isDarkMode = true;
+        isSimpleMode = false;
+    }
+        else{
+            document.getElementById("html").style.background="";
+            document.getElementById("html").style.color="";
+            isDarkMode = false;
+        }
+}
+function toggleSimpleMode() {
+    if(isSimpleMode == false){
+        document.getElementById("html").style.background="none";
+        document.getElementById("html").style.color="";
+        document.getElementById("html").style.fontFamily="none";
+        isCoffeeMode = false;
+        isDarkMode = false;
+        isSimpleMode = true;
+    }
+        else{
+            document.getElementById("html").style.background="";
+            document.getElementById("html").style.fontFamily="";
+            isSimpleMode = false;
+        }
 }
 function versionInfoView() {
     window.open(
