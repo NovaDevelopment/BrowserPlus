@@ -1,5 +1,5 @@
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    window.location.replace("Mobile/MobilePage.html")
+    window.location.replace("Mobile/index.html")
 }
 if (document.cookie.replace(/(?:(?:^|.*;\s*)disclaimerDisplayed\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
     if(window.confirm("By using this site, you agree that you have read and understand the Disclaimers and Terms section of the document, README.md, as well as the LICENSE.md file, in the GitHub repository that contains the contents of this site. If you have not done so, you must complete this action before using the site. You will be redirected to GitHub in order to read the document. After reading, you may return to BrowserPlus and use it.")){
