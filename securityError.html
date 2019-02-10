@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- !!!!! WARNING !!!!!: MODIFYING THIS FILE OR ANY LINKS TO THIS FILE IS AGAINST THE MODIFICATION TERMS AND CONDITIONS FOR BROWSERPLUS. THIS SCRIPT PROTECTS THE USER AND MUST BE PRESERVED IN ALL MODIFIED VERSIONS OF THE SOFTWARE. -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111689131-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-111689131-1');
+        </script>
+        <link rel="shortcut icon" href="Error%20Icon.png">
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+            @import url('https://fonts.googleapis.com/css?family=PT+Serif');
+            html {
+                font-family: 'Open Sans', sans-serif;
+                background: rgb(255,200,200);
+            }
+            a {
+                text-decoration: none;
+                color: cornflowerblue;
+                font-weight: bold;
+            }
+            .right {
+                text-align: right;
+            }
+            #errorWatermark {
+                opacity: 0.1;
+                position: fixed;
+                z-index: -1;
+                width: 500px;
+                height: 500px;
+                top: 50%;
+                left: 50%;
+                margin-top: -250px;
+                margin-left: -250px;
+            }
+            #main {
+                margin-top: 0;
+                margin-bottom: 0;
+                font-family: 'PT Serif';
+                font-size: 100px;
+                font-weight: bold;
+                text-align: right;
+            }
+            #description {
+                font-size: 35px;
+            }
+        </style>
+        <title>Security Error | BrowserPlus</title>
+    </head>
+    <body>
+        <img id="errorWatermark" src="Error%20Icon.png">
+        <p id="main">Something's up with the security of BrowserPlus.</p>
+        <p class="right" id="description">There's something wrong with BrowserPlus's security. You could be seeing this because we think that somebody messed with our security script or because your connection is insecure. For your safety, we have blocked the requested page. For stronger security, try using the <a href="https://novadevelopment.github.io/BrowserPlus">official version of BrowserPlus</a> on a private WiFi network.</p>
+    </body>
+</html>
