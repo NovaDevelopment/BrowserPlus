@@ -20,7 +20,7 @@
         color: transparent;
     }
 }
-@keyframes darkMode {
+@keyframes darkModeButton {
     100% {
         background: black;
         color: white;

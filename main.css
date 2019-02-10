@@ -70,7 +70,7 @@ input[type=button]:hover {
     animation-duration: 3s;
 }
 #toggleDarkMode:hover {
-    animation: darkMode forwards;
+    animation: darkModeButton forwards;
     animation-duration: 3s;
 }
 #refreshbutton {
