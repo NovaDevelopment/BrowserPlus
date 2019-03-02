@@ -22,7 +22,7 @@ function nav(navigationURL) {
             document.getElementById("frame").src = navigationURL;
             document.getElementById("frame").hidden = "true";
             document.getElementById("loading").removeAttribute("hidden");
-            document.getElementById("currentURL").innerHTML = "Last Navigated URL: " + navigationURL;
+            document.getElementById("currentURL").textContent = "Last Navigated URL: " + navigationURL;
             document.getElementById("navurl").value = "http://www.";
         }
         return "Command executed.";
@@ -55,7 +55,7 @@ function blurcontent() {
         }
 }
 function clearData() {
-    document.getElementById("currentURL").innerHTML = "Last Navigated URL: Waiting for navigation...";
+    document.getElementById("currentURL").textContent = "Last Navigated URL: Waiting for navigation...";
     document.getElementById("frame").src = "mobilesplashpage.html";
     console.clear();
 }

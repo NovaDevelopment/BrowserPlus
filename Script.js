@@ -41,13 +41,13 @@ function nav(navigationURL) {
         document.getElementById("navurl").style.color = "white";
     }
         else {
-            document.getElementById("browsertabtitle").innerHTML = "Loading...";
+            document.getElementById("browsertabtitle").textContent = "Loading...";
             document.getElementById("frame").hidden = "true";
             document.getElementById("loading").removeAttribute("hidden");
             document.getElementById("navurl").style.backgroundColor = "";
             document.getElementById("navurl").style.color = "";
             document.getElementById("frame").src = navigationURL;
-            document.getElementById("currentURL").innerHTML = "Last Navigated URL: " + navigationURL;
+            document.getElementById("currentURL").textContent = "Last Navigated URL: " + navigationURL;
             document.getElementById("navurl").value = "http://www.";
         }
         return 'Command executed.';
@@ -56,7 +56,7 @@ function refreshiframe() {
     nav(document.getElementById("frame").src)
 }
 function loadedframe() {
-    document.getElementById("browsertabtitle").innerHTML = "Browser+";
+    document.getElementById("browsertabtitle").textContent = "Browser+";
     document.getElementById("frame").removeAttribute("hidden");
     document.getElementById("loading").hidden = "true";
 }
@@ -87,7 +87,7 @@ function windowclose() {
     window.location.replace("about:blank");
 }
 function clearData() {
-    document.getElementById("currentURL").innerHTML = "Last Navigated URL: Waiting for navigation...";
+    document.getElementById("currentURL").textContent = "Last Navigated URL: Waiting for navigation...";
     document.getElementById("frame").src = "splashpage.html";
     console.clear();
 }
