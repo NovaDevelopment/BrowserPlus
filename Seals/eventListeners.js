@@ -1,0 +1,2 @@
+document.getElementById("mainTitle").addEventListener("click", window.location.reload, false);
+document.getElementById("apply").addEventListener("click", function() {document.getElementById('apply').removeAttribute('hidden'); document.getElementById('loading').hidden = 'true';}, false);

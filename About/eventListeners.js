@@ -1,0 +1,1 @@
+document.getElementById("mainbutton1").addEventListener("click", function() {window.location.replace('/BrowserPlus/');}, false);

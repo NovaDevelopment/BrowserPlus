@@ -12,18 +12,22 @@
           gtag('config', 'UA-111689131-1');
         </script>
         <title>Seal Page | BrowserPlus Seal Authority</title>
-        <link rel="stylesheet" href="Stylesheet.css" type="text/css">
-        <link rel="shortcut icon" href="Seal%20Authority%20Logo.png">
+        <link rel="stylesheet" href="../Stylesheet.css" type="text/css">
+        <link rel="shortcut icon" href="../Seal%20Authority%20Logo.png">
+        <script>
+            // Configuration Script
+            var genURL = "https://..."; // Set Seal Receiver's Genuine URL
+        </script>
     </head>
     <body>
         <sub>Security Tip: Check the address bar to ensure that <data>https://NovaDevelopment.github.io/BrowserPlus/Seals/</data> is in the address. This ensures that the page is genuine. Do not use this page if you received an error regarding the certificate.</sub><br>
-        <main onclick="window.location.replace('index.html')" id="mainTitle">BrowserPlus Seal Authority</main>
+        <main id="mainTitle">BrowserPlus Seal Authority</main>
         <subtitle>Seal Identification Page</subtitle><br><br><br>
-        <img id="watermark" src="Seal%20Authority%20Seal.png" alt="Valid BrowserPlus Seal Page">
+        <img id="watermark" src="../Seal%20Authority%20Seal.png" alt="Valid BrowserPlus Seal Page" oncontextmenu="return false;">
         <datatag>Seal ID Number: </datatag><data>Seal ID Number</data><br>
         <a href="javascript:alert()">View Seal Public Factor Key</a><br>
         <a href="javascript:alert()">View Seal Multiplicative Result</a><br>
-        <a href="javascript:window.open('Verify.html')">Verify Seal Ownership</a>
+        <a href="javascript:window.open('Tools/Verify.html')">Verify Seal Ownership</a>
         <datatag>Seal Identity URL: </datatag><data>Seal ID URL</data><br>
         <datatag>Seal Receiver: </datatag><data>Seal Receiver</data><br>
         <datatag>Seal Description: </datatag><data>Seal Description</data><br>
@@ -31,8 +35,9 @@
         <datatag>Seal Expiration Date: </datatag><data>Expiration Date</data><br>
         <datatag>Genuine URL of Seal Receiver: </datatag><data>Seal Receiver URL</data><br>
         <sub>Use the button below to navigate to the genuine URL.</sub><br>
-        <input class="externalLink" type="button" value="Navigate to Seal Receiver's Genuine URL" onclick="window.open(/*Seal Genuine URL*/)">
+        <input class="externalLink" type="button" value="Navigate to Seal Receiver's Genuine URL" id="navGenURL">
         <br>
-        <input class="externalLink" type="button" value="Seal Authority Website" onclick="window.open('index.html')">
+        <input class="externalLink" type="button" value="Seal Authority Website" id="sealAuthWebsite">
     </body>
+    <script src="eventListeners.js" type="text/javascript"></script>
 </html>
