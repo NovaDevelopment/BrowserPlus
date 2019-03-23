@@ -1,6 +1,9 @@
 ---
 name: Bug Report
-about: Please report any bugs so that they can be corrected in future releases.
+about: File a bug report in order to request that it be fixed.
+title: "[BUG]"
+labels: bug
+assignees: ''
 
 ---
 

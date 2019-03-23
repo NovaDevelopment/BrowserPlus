@@ -1,6 +1,9 @@
 ---
 name: Feature Request
-about: Suggest an idea for new features in BrowserPlus.
+about: Suggest an idea for a new feature.
+title: "[FEATURE]"
+labels: enhancement
+assignees: ''
 
 ---
 
