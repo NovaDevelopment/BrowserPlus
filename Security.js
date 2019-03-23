@@ -6,7 +6,7 @@ if (window.location.hostname !== "novadevelopment.github.io" && document.cookie.
     document.cookie = "unofficialVersionDisclaimerDisplayed=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
     console.warn("Unofficial version of BrowserPlus is being used");
 }
-if (window.location.protocol !== "https:" || window.location.protocol !== "file:") {
+if (window.location.protocol !== "https:" && window.location.protocol !== "file:") {
     if (!window.confirm("The connection to BrowserPlus is not secure. We strongly reccomend not continuing to this page. To continue, click \"OK\". To go back, click \"Cancel\"")) {
         window.location.replace("securityError.html");
     }
