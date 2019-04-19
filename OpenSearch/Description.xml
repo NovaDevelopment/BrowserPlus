@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>BrowserPlus</ShortName>
+  <Description>Use BrowserPlus to browse the web securely and privately.</Description>
+  <Url type="text/html"
+       template="http://novadevelopment.github.io/BrowserPlus/?URL={searchTerms}"/>
+  <LongName>BrowserPlus Integrated Browser</LongName>
+  <Image height="64" width="64" type="image/png">https://novadevelopment.github.io/BrowserPlus/favicon.png</Image>
+  <Developer>Supernova Development</Developer>
+  <Language>en-us</Language>
+  <OutputEncoding>UTF-8</OutputEncoding>
+  <InputEncoding>UTF-8</InputEncoding>
+</OpenSearchDescription>
