@@ -1,0 +1,15 @@
+a {
+    color: inherit;
+    text-decoration: underline;
+}
+a:hover {
+    text-decoration: none;
+}
+.datalabel {
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.data {
+    font-weight: normal;
+}

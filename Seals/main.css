@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@keyframes sealAuthSealFade {
+    100% {
+        opacity: 0.25;
+    }
+}
+html {
+    background: linear-gradient(135deg, #23b2ff 0%, #22ffb5 100%);
+    min-height: 100%;
+    font-family: "Titillium Web", sans-serif;
+    color: white;
+}
+.watermark {
+    opacity: 0.5;
+    position: fixed;
+    z-index: 1;
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -250px;
+}
+.watermark:hover {
+    animation: sealAuthSealFade forwards;
+    animation-duration: 0.5s;
+}
+.top {
+    font-size: 50pt;
+    margin: 0px;
+    font-weight: bold;
+}
+.topMinor {
+    font-size: 25pt;
+    margin-top: 20pt;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.clear {
+    clear: both;
+}
+.clear-left {
+    clear: left;
+}
+.clear-right {
+    clear: right;
+}
+.bold {
+    font-weight: bold;
+}
+.nonALink {
+    cursor: pointer;
+    font-weight: bold;
+}
+#application {
+    width: 100%;
+    height: 500pt;
+    border-width: 0px;
+}

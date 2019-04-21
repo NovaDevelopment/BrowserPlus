@@ -1,2 +1,3 @@
-document.getElementById("mainTitle").addEventListener("click", window.location.reload, false);
-document.getElementById("apply").addEventListener("click", function() {document.getElementById('apply').removeAttribute('hidden'); document.getElementById('loading').hidden = 'true';}, false);
+document.getElementById("sampleInsecurePageLink").addEventListener("click", function() {
+    window.open("Sample%20Insecure%20Page%20Warning.png", "_blank", "menubar=no,toolbar=no,location=no");
+}, false)

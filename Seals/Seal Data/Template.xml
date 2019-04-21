@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sealData>
+    <IDHash>Insert the provided SHA-256 Seal Identification Hash here.</IDHash><!--This is the most critical part of your code. It allows for your seal image to appear on the page and ensures consistency. The name of your document should be the same as the nodeValue of this tag.-->
+    <publicKey>Insert you seal's public HMAC key here. To generate a HMAC public key, simply generate a random 4096 digit hexadecimal number.</publicKey>
+    <HMACResult>Insert the result of SHA-512 hashing your private key using your public HMAC key here.</HMACResult><!--Get a priate key by generating a random 4096 digit hexadecimal number.-->
+    <receiver>Insert your name here.</receiver>
+    <issueDate>Insert the date at which your seal was issued in ISO-8601 format here.</issueDate>
+    <expirationDate>Insert the date at which your seal expires in ISO-8601 format here.</expirationDate>
+</sealData> 
