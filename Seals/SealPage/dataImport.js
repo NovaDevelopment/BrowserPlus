@@ -11,6 +11,9 @@ client.addEventListener("load", function() {
     document.getElementById("data-HMACResult").addEventListener("click", function () {
         window.alert(window.responseXML.getElementsByTagName("HMACResult")[0].childNodes[0].nodeValue);
     }, false);
+    document.getElementById("data-RSAPublic").addEventListener("click", function () {
+        window.alert(window.responseXML.getElementsByTagName("rsapub")[0].childNodes[0].nodeValue);
+    }, false);
     document.getElementById("data-Receiver").textContent = window.responseXML.getElementsByTagName("receiver")[0].childNodes[0].nodeValue;
     document.getElementById("data-IssueDate").textContent = window.responseXML.getElementsByTagName("issueDate")[0].childNodes[0].nodeValue;
     document.getElementById("data-ExpirationDate").textContent = window.responseXML.getElementsByTagName("expirationDate")[0].childNodes[0].nodeValue;

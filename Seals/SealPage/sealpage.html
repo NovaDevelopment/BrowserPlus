@@ -15,6 +15,7 @@
             <p class="datalabel">Seal Identification Hash: <span class="data" id="data-IDHash"></span></p>
             <a id="data-PubKey">View Seal Public Key</a><br>
             <a id="data-HMACResult">View Seal HMAC Keyed Hash Result</a><br>
+            <a id="data-RSAPublic">View Seal RSA Public Key</a><br>
             <p class="datalabel">Seal Receiver: <span class="data" id="data-Receiver"></span></p>
             <p class="datalabel">Seal Issue Date: <span class="data" id="data-IssueDate"></span></p>
             <p class="datalabel">Seal Expiration Date: <span class="data" id="data-ExpirationDate"></span></p>
@@ -24,4 +25,9 @@
     </body>
     <script src="https://code.jquery.com/jquery-3.4.0.min.js" type="text/javascript"></script>
     <script src="dataImport.js" type="text/javascript"></script>
+    <script>
+        document.getElementById("sampleInsecurePageLink").addEventListener("click", function() {
+            window.open("../Sample%20Insecure%20Page%20Warning.png", "_blank", "menubar=no,toolbar=no,location=no");
+        }, false)
+    </script>
 </html>
