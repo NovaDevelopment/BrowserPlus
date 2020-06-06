@@ -98,3 +98,19 @@ input[type=button] {
     width: 12.5%;
     height: 12.5%;
 }
+#deprecationBanner {
+  width: 100%;
+  min-height: 40px;
+  background: darkgrey;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  margin: 0px;
+  font-family: sans-serif;
+}
+#everything {
+  margin: 8px;
+}
+#deprecationMessage {
+  cursor: help;
+}

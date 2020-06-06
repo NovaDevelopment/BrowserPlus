@@ -1,3 +1,6 @@
+<!--
+NOTE: This version of BrowserPlus, the HTML version, is deprecated, and no further changes will be made to it. Stay on the lookout for an installable extension for major browsers and bookmarklets for WebExtension-incompatible platforms.
+
 <?xml version="1.0" encoding="UTF-8"?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
   <ShortName>BrowserPlus</ShortName>
@@ -11,3 +14,4 @@
   <OutputEncoding>UTF-8</OutputEncoding>
   <InputEncoding>UTF-8</InputEncoding>
 </OpenSearchDescription>
+-->

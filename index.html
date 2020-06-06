@@ -21,36 +21,39 @@
         <title id="browsertabtitle">Browser+</title>
     </head>
     <body>
-        <div id="non-browser">
-            <h1 id="main-title">Browser+</h1>
-            <h2 id="toolsheader" class="non-browser">Tools</h2>
-            <h3>Privacy</h3>
-            <input title="Blur the content of your browser so that it cannot be easily read. Click again to undo." class="toolbutton" type="button" value="Privacy Blur" id="blur" accesskey="b">
-            <input title="If compatible, your browser will attempt to close the window. Otherwise, it will navigate to a blank page." class="toolbutton" type="button" value="Close Window" id="windowClose">
-            <input title="Replace the content of your website with the BrowserPlus logo. Clicking again will not undo the action." class="toolbutton" type="button" value="Quick Data Remove" id="quickRemove">
-            <h3>Appearance</h3>
-            <input title="Remove your operating system's toolbar and your browser toolbar" class="toolbutton" type="button" value="Activate Fullscreen" id="activateFullScreen">
-            <input title="Dark Mode is the perfect solution to nighttime browsing." class="toolbutton" type="button" value="Toggle Dark Mode" id="toggleDarkMode">
-            <input title="Enable Simple Mode to remove distracting fonts and backgrounds from the interface." class="toolbutton" type="button" value="Toggle Simple Mode" id="toggleSimpleMode">
-            <input title="Studies have shown that blue light stimulates the human circadian rhythm. You may notice that at a certain time, some electronic devices' screens aquire an orange tint. Because orange is the opposite of blue, it blocks some of the display's blue light, aiding sleep. BrowserPlus's Coffee Mode does the opposite, using blue light to awaken you by stimulating your circadian rhythm." class="toolbutton" type="button" value="Toggle Coffee Mode" id="toggleCoffeeMode">
-            <input title="Enable Blue Light Filter to remove some of the blue light in the display of BrowserPlus. This may improve sleep quality." class="toolbutton" type="button" value="Toggle Blue Light Filter" id="toggleBlueLightFilter">
-            <h3>About</h3>
-            <input class="toolbutton" externallink="true" type="button" value="View Version Information" id="versionInfoViewer">
-            <input class="toolbutton" externallink="true" type="button" value="Open GitHub Page" id="openGHPage">
-            <input class="toolbutton" externallink="true" type="button" value="Report an Issue" id="reportIssues">
-            <h2 class="non-browser" id="browserheader">Browser</h2>
-        </div>
-        <div id="browser">
-            <div id="subbrowsercontent">
-                <input type="button" id="browserfullscreen" value="Fullwindow">
-                <input type="url" placeholder="Enter URL to navigate" value="http://www." id="navurl">
-                <input type="button" value="Navigate" id="navigationbutton">
-                <input type="button" title="Refresh the content of your browser. Please note: the refresh button will refresh the frame by re-navigating to the last URL that you entered in the 'Enter URL' field" value="&#8635" id="refreshbutton">
-                <p id="currentURL">Last Navigated URL: https://www.bing.com/</p>
-            </div>
-            <img src="Loading.gif" hidden id="loading">
-            <iframe id="frame" src="https://www.bing.com/"></iframe>
-        </div>
+        <div id="deprecationBanner"><span id="deprecationMessage" title="The BrowserPlus software has begun the transition to a more compatible platform as a web extension. This version is BrowserPlus legacy. Thus, no further changes, including security updates, will be made to this repository. NovaDevelopment and/or Ben Zelnick will not be held liable for any losses, damages, etc. that arise from the use of BrowserPlus. By accessing the software, the end user assumes all liability for issues arising from the use of BrowserPlus.">This version of BrowserPlus, the HTML version, is deprecated, and no further changes will be made to it. Stay on the lookout for an installable extension for major browsers and bookmarklets for WebExtension-incompatible platforms.</span></div>
+        <div id="everything">
+          <div id="non-browser">
+              <h1 id="main-title">Browser+</h1>
+              <h2 id="toolsheader" class="non-browser">Tools</h2>
+              <h3>Privacy</h3>
+              <input title="Blur the content of your browser so that it cannot be easily read. Click again to undo." class="toolbutton" type="button" value="Privacy Blur" id="blur" accesskey="b">
+              <input title="If compatible, your browser will attempt to close the window. Otherwise, it will navigate to a blank page." class="toolbutton" type="button" value="Close Window" id="windowClose">
+              <input title="Replace the content of your website with the BrowserPlus logo. Clicking again will not undo the action." class="toolbutton" type="button" value="Quick Data Remove" id="quickRemove">
+              <h3>Appearance</h3>
+              <input title="Remove your operating system's toolbar and your browser toolbar" class="toolbutton" type="button" value="Activate Fullscreen" id="activateFullScreen">
+              <input title="Dark Mode is the perfect solution to nighttime browsing." class="toolbutton" type="button" value="Toggle Dark Mode" id="toggleDarkMode">
+              <input title="Enable Simple Mode to remove distracting fonts and backgrounds from the interface." class="toolbutton" type="button" value="Toggle Simple Mode" id="toggleSimpleMode">
+              <input title="Studies have shown that blue light stimulates the human circadian rhythm. You may notice that at a certain time, some electronic devices' screens aquire an orange tint. Because orange is the opposite of blue, it blocks some of the display's blue light, aiding sleep. BrowserPlus's Coffee Mode does the opposite, using blue light to awaken you by stimulating your circadian rhythm." class="toolbutton" type="button" value="Toggle Coffee Mode" id="toggleCoffeeMode">
+              <input title="Enable Blue Light Filter to remove some of the blue light in the display of BrowserPlus. This may improve sleep quality." class="toolbutton" type="button" value="Toggle Blue Light Filter" id="toggleBlueLightFilter">
+              <h3>About</h3>
+              <input class="toolbutton" externallink="true" type="button" value="View Version Information" id="versionInfoViewer">
+              <input class="toolbutton" externallink="true" type="button" value="Open GitHub Page" id="openGHPage">
+              <input class="toolbutton" externallink="true" type="button" value="Report an Issue" id="reportIssues">
+              <h2 class="non-browser" id="browserheader">Browser</h2>
+          </div>
+          <div id="browser">
+              <div id="subbrowsercontent">
+                  <input type="button" id="browserfullscreen" value="Fullwindow">
+                  <input type="url" placeholder="Enter URL to navigate" value="http://www." id="navurl">
+                  <input type="button" value="Navigate" id="navigationbutton">
+                  <input type="button" title="Refresh the content of your browser. Please note: the refresh button will refresh the frame by re-navigating to the last URL that you entered in the 'Enter URL' field" value="&#8635" id="refreshbutton">
+                  <p id="currentURL">Last Navigated URL: https://www.bing.com/</p>
+              </div>
+              <img src="Loading.gif" hidden id="loading">
+              <iframe id="frame" src="https://www.bing.com/"></iframe>
+          </div>
+      </div>
     </body>
     <script src="eventListeners.js" type="text/javascript"></script>
     <script src="OpenSearch/Script.js" type="text/javascript"></script>

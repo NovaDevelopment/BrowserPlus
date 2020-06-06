@@ -25,6 +25,10 @@
                 color: cornflowerblue;
                 font-weight: bold;
             }
+            body {
+              margin: 0px;
+              padding: 0px;
+            }
             .right {
                 text-align: right;
             }
@@ -50,12 +54,31 @@
             #description {
                 font-size: 35px;
             }
+            #deprecationBanner {
+              width: 100%;
+              min-height: 40px;
+              background: darkgrey;
+              color: white;
+              text-align: center;
+              line-height: 40px;
+              margin: 0px;
+              font-family: sans-serif;
+            }
+            #everything {
+              margin: 8px;
+            }
+            #deprecationMessage {
+              cursor: help;
+            }
         </style>
         <title>Security Error | BrowserPlus</title>
     </head>
     <body>
+      <div id="deprecationBanner"><span id="deprecationMessage" title="The BrowserPlus software has begun the transition to a more compatible platform as a web extension. This version is BrowserPlus legacy. Thus, no further changes, including security updates, will be made to this repository. NovaDevelopment and/or Ben Zelnick will not be held liable for any losses, damages, etc. that arise from the use of BrowserPlus. By accessing the software, the end user assumes all liability for issues arising from the use of BrowserPlus.">This version of BrowserPlus, the HTML version, is deprecated, and no further changes will be made to it. Stay on the lookout for an installable extension for major browsers and bookmarklets for WebExtension-incompatible platforms.</span></div>
+      <div id="everything">
         <img id="errorWatermark" src="Error%20Icon.png">
         <p id="main">Something's up with the security of BrowserPlus.</p>
         <p class="right" id="description">There's something wrong with BrowserPlus's security. You could be seeing this because we think that somebody messed with our security script or because your connection is insecure. For your safety, we have blocked the requested page. For stronger security, try using the <a href="https://novadevelopment.github.io/BrowserPlus">official version of BrowserPlus</a> on a private WiFi network.</p>
+      </div>
     </body>
 </html>

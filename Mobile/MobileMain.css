@@ -6,6 +6,9 @@ html {
     font-size: 30px;
     min-height: 100%;
 }
+body {
+  margin: 0px;
+}
 a {
     color: white;
 }
@@ -57,4 +60,19 @@ input[type = button] {
 }
 #webappnote {
     margin-top: 5px;
+}
+#deprecationBanner {
+  width: 100%;
+  min-height: 60px;
+  background: darkgrey;
+  color: white;
+  text-align: center;
+  line-height: 60px;
+  margin: 0px;
+}
+#everything {
+  margin: 8pt;
+}
+#deprecationMessage {
+  cursor: help;
 }

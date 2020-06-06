@@ -1,3 +1,6 @@
+body {
+  margin: 0px;
+}
 a {
     color: inherit;
     text-decoration: underline;
@@ -12,4 +15,20 @@ a:hover {
 }
 .data {
     font-weight: normal;
+}
+#deprecationBanner {
+  width: 100%;
+  min-height: 40px;
+  background: darkgrey;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  margin: 0px;
+  font-family: sans-serif;
+}
+#everything {
+  margin: 8px;
+}
+#deprecationMessage {
+  cursor: help;
 }

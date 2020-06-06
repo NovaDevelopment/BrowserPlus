@@ -17,15 +17,37 @@
                 background: linear-gradient(135deg, cyan 0%, blue 100%);
                 min-height: 100%;
             }
+            body {
+                margin: 0px;
+                padding: 0px;
+            }
             subtitle {
                 font-size: 13px;
                 font-weight: bold;
                 color: red;
             }
+            #deprecationBanner {
+              width: 100%;
+              min-height: 40px;
+              background: darkgrey;
+              color: white;
+              text-align: center;
+              line-height: 40px;
+              margin: 0px;
+              font-family: sans-serif;
+            }
+            #everything {
+              margin: 8px;
+            }
+            #deprecationMessage {
+              cursor: help;
+            }
         </style>
         <link rel="shortcut icon" href="favicon.png">
     </head>
     <body>
+      <div id="deprecationBanner"><span id="deprecationMessage" title="The BrowserPlus software has begun the transition to a more compatible platform as a web extension. This version is BrowserPlus legacy. Thus, no further changes, including security updates, will be made to this repository. NovaDevelopment and/or Ben Zelnick will not be held liable for any losses, damages, etc. that arise from the use of BrowserPlus. By accessing the software, the end user assumes all liability for issues arising from the use of BrowserPlus.">This version of BrowserPlus, the HTML version, is deprecated, and no further changes will be made to it. Stay on the lookout for an installable extension for major browsers and bookmarklets for WebExtension-incompatible platforms.</span></div>
+      <div id="everything">
         <h1>BrowserPlus: Version Information</h1>
         <subtitle>NOTE: This page may not be up to date at all times. Check <a href="https://www.github.com/NovaDevelopment/BrowserPlus/">GitHub</a> for the most up to date version information</subtitle>
         <h2>Release</h2>
@@ -45,5 +67,6 @@
         <p>Comprehensive</p>
         <h3>Overall Quality</h3>
         <p>5/5</p>
+      </div>
     </body>
 </html>

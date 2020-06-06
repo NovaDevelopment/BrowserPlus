@@ -23,6 +23,10 @@ permalink: /404.html
                 min-height: 100%;
                 font-family: "Questrial";
             }
+            body {
+              margin: 0px;
+              padding: 0px;
+            }
             mono {
                 font-family: monospace, "IBM Plex Mono";
             }
@@ -38,13 +42,32 @@ permalink: /404.html
                 margin: 15px;
                 margin-bottom: 0px;
             }
+            #deprecationBanner {
+              width: 100%;
+              min-height: 40px;
+              background: darkgrey;
+              color: white;
+              text-align: center;
+              line-height: 40px;
+              margin: 0px;
+              font-family: sans-serif;
+            }
+            #everything {
+              margin: 8px;
+            }
+            #deprecationMessage {
+              cursor: help;
+            }
         </style>
     </head>
     <body>
-        <p id="main-title">404</p>
-        <p class="sub">That's an error.</p>
-        <p class="sub">BrowserPlus could not locate the page that you were looking for. Sorry about that! Please check the URL that you entered.</p>
-        <p class="sub">In HTTP (HyperText Transfer Protocol), the error is <mono>Cannot GET<span style="font-style: italic;"> the page that you were looking for</span></mono></p>
-        <p class="sub">Most likely, you typed in a wrong URL. Remember that just a single incorrect letter can cause this error. Check your URL and try again.</p>
+        <div id="deprecationBanner"><span id="deprecationMessage" title="The BrowserPlus software has begun the transition to a more compatible platform as a web extension. This version is BrowserPlus legacy. Thus, no further changes, including security updates, will be made to this repository. NovaDevelopment and/or Ben Zelnick will not be held liable for any losses, damages, etc. that arise from the use of BrowserPlus. By accessing the software, the end user assumes all liability for issues arising from the use of BrowserPlus.">This version of BrowserPlus, the HTML version, is deprecated, and no further changes will be made to it. Stay on the lookout for an installable extension for major browsers and bookmarklets for WebExtension-incompatible platforms.</span></div>
+        <div id="everything">
+          <p id="main-title">404</p>
+          <p class="sub">That's an error.</p>
+          <p class="sub">BrowserPlus could not locate the page that you were looking for. Sorry about that! Please check the URL that you entered.</p>
+          <p class="sub">In HTTP (HyperText Transfer Protocol), the error is <mono>Cannot GET<span style="font-style: italic;"> the page that you were looking for</span></mono></p>
+          <p class="sub">Most likely, you typed in a wrong URL. Remember that just a single incorrect letter can cause this error. Check your URL and try again.</p>
+        </div>
     </body>
 </html>
